@@ -72,4 +72,36 @@ button:hover {
     display: flex;
     justify-content: space-around; }
 
+header {
+  background-color: #501011;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between; }
+
+.logo {
+  height: 50%;
+  width: 50%; }
+
+.menu {
+  height: 15%;
+  width: 15%;
+  float: right;
+  padding-top: 12px; }
+
+footer {
+  background-color: #501011;
+  height: auto;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  padding: 12px;
+  justify-content: space-between; }
+  footer p {
+    color: white; }
+  footer .someIkoner {
+    color: white; }
+
 /*# sourceMappingURL=styles.css.map */
