@@ -5,6 +5,7 @@
 body {
   margin: 0; }
 
+
 h1 {
   font-family: 'Stardos Stencil', cursive;
   color: black;
@@ -16,6 +17,7 @@ h2 {
   font-size: 20pt; }
 
 h3, h4, h5, h6 {
+
   margin: 0;
   padding: 0; }
 
