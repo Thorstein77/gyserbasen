@@ -45,6 +45,7 @@ li {
 p {
   margin: 0; // Ingen ydre margen fra paragraffer
   padding: 0; // Ingen indre margen fra paragraffer
+  font-family: 'Arial', sans-serif;
 }
 
 // Sikrer billeder er responsive
@@ -72,6 +73,36 @@ img {
   width: 90%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+button{
+  background-color: $roedLys;
+  color: $hvid;
+  font-family: 'Stardos Stencil', cursive;
+  border: none;
+  border-radius: 25px;
+  width: 60%;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: $roed;
+}
+
+.blog{
+  h3{
+    font-family: 'Stardos Stencil', cursive;
+  }
+  ol li{
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    margin-top: 5px;
+  }
+  .flex{
+    display: flex;
+    justify-content: space-around;
+  }
+  background-image: url("../images/blogBG.jpg");
 }
 
 @media screen and (min-width: 768px) {
