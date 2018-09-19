@@ -5,11 +5,28 @@
   box-sizing: border-box; // Bokse har altid den størrelse man giver uanset om der tilføjes margen mv.
 }
 
+$roed: #2d0d10;
+$roedLys: #501011;
+$hvid: white;
+$sort: black;
+
 body {
   margin: 0; // Ingen kanter i siden af browser
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-family: 'Stardos Stencil', cursive;
+  color: $sort;
+  font-size: 45pt;
+}
+
+h2 {
+  font-family: 'Stardos Stencil', cursive;
+  color: $hvid;
+  font-size: 20pt;
+}
+
+h3, h4, h5, h6 {
   margin: 0; // Ingen ydre margen fra overskrifter
   padding: 0; // Ingen indre margen fra overskrifter
 }
