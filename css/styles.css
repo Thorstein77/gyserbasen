@@ -8,7 +8,8 @@ body {
 h1 {
   font-family: 'Stardos Stencil', cursive;
   color: black;
-  font-size: 45pt; }
+  font-size: 45pt;
+  text-align: center; }
 
 h2 {
   font-family: 'Stardos Stencil', cursive;

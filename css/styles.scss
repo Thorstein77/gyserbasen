@@ -18,6 +18,7 @@ h1 {
   font-family: 'Stardos Stencil', cursive;
   color: $sort;
   font-size: 45pt;
+  text-align: center;
 }
 
 h2 {
@@ -51,6 +52,14 @@ img {
   display: block; // Billeder er et element (laver linjeskift)
   max-width: 100%; // Bredde må maks fylde 100%
   height: auto; // Højden skal tilpasse sig
+}
+
+.nyheder {
+
+}
+
+.videoSlideshow {
+
 }
 
 .backGroundImage{
