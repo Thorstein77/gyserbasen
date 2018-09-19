@@ -53,8 +53,62 @@ img {
   height: auto; // Højden skal tilpasse sig
 }
 
+header{
+  background-color: $roedLys;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.logo{
+  height: 50%;
+  width: 50%;
+
+}
+
+.menu{
+  height: 15%;
+  width: 15%;
+  float: right;
+  padding-top: 12px;
+
+}
+
+  footer{
+  background-color: $roedLys;
+  height: auto;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+
+    
+  p{
+    color: $hvid;
+  }
+
+
+  .someIkoner{
+    color: $hvid;
+  }
+    
+}
+
+
+
+
+
+
+
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
+
+
+
 }
 
 @media screen and (min-width: 992px) {
