@@ -5,7 +5,6 @@
 body {
   margin: 0; }
 
-
 h1 {
   font-family: 'Stardos Stencil', cursive;
   color: black;
@@ -16,8 +15,7 @@ h2 {
   color: white;
   font-size: 20pt; }
 
-h3, h4, h5, h6 {
-
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
@@ -37,5 +35,15 @@ img {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.backGroundImage {
+  background-image: url("../images/darkBG.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.4); }
 
 /*# sourceMappingURL=styles.css.map */
