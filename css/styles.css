@@ -8,14 +8,15 @@ body {
 h1 {
   font-family: 'Stardos Stencil', cursive;
   color: black;
-  font-size: 45pt; }
+  font-size: 45pt;
+  text-align: center; }
 
 h2 {
   font-family: 'Stardos Stencil', cursive;
   color: white;
   font-size: 20pt; }
 
-h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
@@ -29,12 +30,47 @@ li {
 
 p {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Arial', sans-serif; }
 
 img {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.backGroundImage {
+  background-image: url("../images/darkBG.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.4); }
+
+button {
+  background-color: #501011;
+  color: white;
+  font-family: 'Stardos Stencil', cursive;
+  border: none;
+  border-radius: 25px;
+  width: 60%;
+  cursor: pointer; }
+
+button:hover {
+  background-color: #2d0d10; }
+
+.blog {
+  background-image: url("../images/blogBG.jpg"); }
+  .blog h3 {
+    font-family: 'Stardos Stencil', cursive; }
+  .blog ol li {
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    margin-top: 5px; }
+  .blog .flex {
+    display: flex;
+    justify-content: space-around; }
 
 header {
   background-color: #501011;

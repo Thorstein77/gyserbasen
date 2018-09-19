@@ -18,6 +18,7 @@ h1 {
   font-family: 'Stardos Stencil', cursive;
   color: $sort;
   font-size: 45pt;
+  text-align: center;
 }
 
 h2 {
@@ -26,7 +27,7 @@ h2 {
   font-size: 20pt;
 }
 
-h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0; // Ingen ydre margen fra overskrifter
   padding: 0; // Ingen indre margen fra overskrifter
 }
@@ -44,6 +45,7 @@ li {
 p {
   margin: 0; // Ingen ydre margen fra paragraffer
   padding: 0; // Ingen indre margen fra paragraffer
+  font-family: 'Arial', sans-serif;
 }
 
 // Sikrer billeder er responsive
@@ -51,6 +53,56 @@ img {
   display: block; // Billeder er et element (laver linjeskift)
   max-width: 100%; // Bredde må maks fylde 100%
   height: auto; // Højden skal tilpasse sig
+}
+
+.nyheder {
+
+}
+
+.videoSlideshow {
+
+}
+
+.backGroundImage{
+  background-image: url("../images/darkBG.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.content{
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+button{
+  background-color: $roedLys;
+  color: $hvid;
+  font-family: 'Stardos Stencil', cursive;
+  border: none;
+  border-radius: 25px;
+  width: 60%;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: $roed;
+}
+
+.blog{
+  h3{
+    font-family: 'Stardos Stencil', cursive;
+  }
+  ol li{
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    margin-top: 5px;
+  }
+  .flex{
+    display: flex;
+    justify-content: space-around;
+  }
+  background-image: url("../images/blogBG.jpg");
 }
 
 header{
@@ -86,7 +138,7 @@ header{
   padding: 12px;
   justify-content: space-between;
 
-    
+
   p{
     color: $hvid;
   }
@@ -95,7 +147,7 @@ header{
   .someIkoner{
     color: $hvid;
   }
-    
+
 }
 
 
