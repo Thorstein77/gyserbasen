@@ -18,6 +18,7 @@ h1 {
   font-family: 'Stardos Stencil', cursive;
   color: $sort;
   font-size: 45pt;
+  text-align: center;
 }
 
 h2 {
@@ -26,7 +27,7 @@ h2 {
   font-size: 20pt;
 }
 
-h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0; // Ingen ydre margen fra overskrifter
   padding: 0; // Ingen indre margen fra overskrifter
 }
@@ -52,6 +53,26 @@ img {
   display: block; // Billeder er et element (laver linjeskift)
   max-width: 100%; // Bredde må maks fylde 100%
   height: auto; // Højden skal tilpasse sig
+}
+
+.nyheder {
+
+}
+
+.videoSlideshow {
+
+}
+
+.backGroundImage{
+  background-image: url("../images/darkBG.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.content{
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 button{
