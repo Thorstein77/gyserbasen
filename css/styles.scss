@@ -76,12 +76,9 @@ img {
 }
 
 button{
-  background-color: $roedLys;
   color: $hvid;
   font-family: 'Stardos Stencil', cursive;
   border: none;
-  border-radius: 25px;
-  width: 60%;
   cursor: pointer;
 }
 
@@ -121,47 +118,30 @@ header{
 
 }
 
-.menu{
-  height: 15%;
-  width: 15%;
-  float: right;
-  padding-top: 12px;
-
+.drop{
+  background-color: transparent;
 }
 
-  footer{
-  background-color: $roedLys;
-  height: auto;
-  width: 100%;
-  flex-direction: row;
-  display: flex;
-  padding: 12px;
-  justify-content: space-between;
+ .dropDowncontent{
+   display: none;
+   height: auto;
+   width: 90%;
+   background-color: transparent;
+   line-height: 60px;
+   font-size: x-large;
+   text-align: left;
 
+   button:hover{
+     background-color: transparent;
+   }
 
-  p{
-    color: $hvid;
-  }
+   a{
+     color: $hvid;
+     text-decoration: none;
+     
+   }
+ }
 
-
-  .someIkoner{
-    color: $hvid;
-  }
-
-}
-
-
-
-
-
-
-
-@media screen and (min-width: 768px) {
-  // Alt der ændres i tablet stående fra mobil
-
-
-
-}
 
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
@@ -169,6 +149,31 @@ header{
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+
+  .dropDown{
+   display: none;
+ }
+
+  header{
+  height: 100px;
+  padding: 20px;
+
+  a{
+      color: $hvid;
+      text-decoration: none;
+   }
+
+  }
+
+  .logo{
+    height: 20%;
+    width: 20%;
+
+  }
+
+  .menuBar{
+    
+  }
 }
 
 @media print {
