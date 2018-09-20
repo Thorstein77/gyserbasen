@@ -39,6 +39,68 @@ img {
   max-width: 100%;
   height: auto; }
 
+.videoSlideshowContainer {
+  max-width: 1000px;
+  position: relative;
+  margin: auto; }
+
+.videoSlideshow {
+  display: none; }
+
+.naeste, .forrige {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; }
+
+.naeste {
+  right: 0;
+  border-radius: 3px 0 0 3px; }
+
+.forrige:hover, .naeste:hover {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.videoSlideText {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%; }
+
+.videoSlideNumbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0; }
+
+.videoSlideshowTextContainer {
+  display: inline-block;
+  transition: background-color 0.6s ease; }
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
 .backGroundImage {
   background-image: url("../images/darkBG.jpg");
   background-repeat: no-repeat;
