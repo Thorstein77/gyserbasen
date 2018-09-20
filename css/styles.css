@@ -102,11 +102,13 @@ img {
   to {
     opacity: 1; } }
 .backGroundImage {
+  width: 100vw;
   background-image: url("../images/darkBG.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
 .content {
+  display: block;
   width: 90%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4); }
@@ -223,6 +225,22 @@ footer {
 footer p {
     color: white; }
 footer .someIkoner {
+    color: white; }
+
+.genreSlide {
+  width: 100%;
+  height: 400px;
+  background-color: #2d0d10; }
+  .genreSlide h2 {
+    color: white;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5% 0 0 0; }
+  .genreSlide .genreSlideMobile {
+    background-color: #501011;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
     color: white; }
 
 @media screen and (min-width: 768px) {

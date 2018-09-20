@@ -132,12 +132,14 @@ img {
 }
 
 .backGroundImage{
+  width: 100vw;
   background-image: url("../images/darkBG.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .content{
+  display: block;
   width: 90%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4);
@@ -273,7 +275,26 @@ footer{
 
 }
 
+.genreSlide{
+  width: 100%;
+  height: 400px;
+  background-color: $roed;
 
+  h2{
+    color: $hvid;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5% 0 0 0;
+  }
+
+  .genreSlideMobile{
+    background-color: $roedLys;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    color: $hvid;
+  }
+}
 
 
 @media screen and (min-width: 768px) {

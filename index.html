@@ -32,8 +32,6 @@
 <!-- i <body> har man alt indhold på siden -->
 <body>
 
- <!-- Hej -->
-
 <div class="backGroundImage">
     <div class="content">
 
@@ -159,6 +157,44 @@
                         </h2>
 
                         Lav et slideshow her
+
+                        <div class="genreSlide">
+                            <h2>
+                                Action / Gyser
+                            </h2>
+
+                            <div class="genreSlideMobile">
+                                <div>
+                                    <img src="images/kat1.jpg">
+
+                                    <p class="acionHorror" id="genre2-1">
+                                        <h3>test</h3>
+                                        <h4>aldersgrænse</h4>
+                                        To Grøndlændere gik forbi en bar
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <img src="images/kat2.jpeg">
+
+                                    <p class="acionHorror" id="genre2-2">
+                                        <h3>test</h3>
+                                        <h4>aldersgrænse</h4>
+                                        To Grøndlændere gik forbi en bar
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <img src="images/kat3.jpeg">
+
+                                    <p class="acionHorror" id="genre2-3">
+                                        <h3>test</h3>
+                                        <h4>aldersgrænse</h4>
+                                        To Grøndlændere gik forbi en bar
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -212,6 +248,18 @@
         $('.dropDowncontent').toggle("500")
     })
 
+    $(document).ready(function (e) {
+        $(function () {
+            $('.genreSlideMobile div').hide(); // hide all slides
+            $('.genreSlideMobile div:first-child').show(); // show first slide
+            setInterval(function () {
+                    $('.genreSlideMobile div:first-child').fadeOut(500)
+                        .next('div').delay(499).fadeIn(500)
+                        .end().appendTo('.genreSlideMobile');
+                },
+                2000); // slide duration
+        });
+    })
 
 </script>
 
