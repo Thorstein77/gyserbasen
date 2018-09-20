@@ -143,6 +143,13 @@ img {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+button{
+  color: $hvid;
+  font-family: 'Stardos Stencil', cursive;
+  border: none;
+  cursor: pointer;
+}
+
 .blog button{
   background-color: $roedLys;
   font-family: 'Stardos Stencil', cursive;
@@ -221,15 +228,31 @@ header{
 
 }
 
-.menu{
-  height: 15%;
-  width: 15%;
-  float: right;
-  padding-top: 12px;
-
+.drop{
+  background-color: transparent;
 }
 
-  footer{
+ .dropDowncontent{
+   display: none;
+   height: auto;
+   width: 90%;
+   background-color: transparent;
+   line-height: 60px;
+   font-size: x-large;
+   text-align: left;
+
+   button:hover{
+     background-color: transparent;
+   }
+
+   a{
+     color: $hvid;
+     text-decoration: none;
+
+   }
+ }
+
+footer{
   background-color: $roedLys;
   height: auto;
   width: 100%;
@@ -249,7 +272,6 @@ header{
   }
 
 }
-
 
 
 
@@ -276,6 +298,31 @@ header{
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+
+  .dropDown{
+   display: none;
+ }
+
+  header{
+  height: 100px;
+  padding: 20px;
+
+  a{
+      color: $hvid;
+      text-decoration: none;
+   }
+
+  }
+
+  .logo{
+    height: 20%;
+    width: 20%;
+
+  }
+
+  .menuBar{
+
+  }
   .blog{
     .blogTxt{
       padding-top: 40px;

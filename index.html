@@ -36,14 +36,38 @@
 
 <div class="backGroundImage">
     <div class="content">
+
+
         <header>
             <div class="logo">
                 <img src="images/Logo_hvid.png">
             </div>
 
-            <div class="menu">
-                <img src="images/menu.png">
-            </div>
+                <div class="menuBar">
+                    <a href="index.html">
+                        Forside
+                    </a>
+                    <a href="blog_underside.html">
+                        Blogs
+                    </a>
+                </div>
+
+
+                <div class="dropDown">
+                    <button class="drop"><img src="images/menu.png"></button>
+
+                    <div class="dropDowncontent">
+                        <a href="index.html">
+                            <p>Forside </p>
+                        </a>
+
+                        <a href="blog_underside.html">
+                            <p> Blogs </p>
+                        </a>
+                    </div>
+
+
+                </div>
         </header>
 
         <main>
@@ -150,18 +174,46 @@
 
             </div>
 
+
+
             <div class="someIkoner">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-google-plus-square"></i>
+
+                <div class="facebookIkon">
+
+                    <a href="https://da-dk.facebook.com/login/"><i class="fab fa-facebook-square"></i>
+                    </a>
+                </div>
+
+
+                <div class="twitterIkon">
+
+                    <a href="https://twitter.com/login?lang=da"><i class="fab fa-twitter-square"></i>
+                    </a>
+                </div>
+
+
+                <div class="googleIkon">
+
+                    <a href="https://plus.google.com/discover"><i class="fab fa-google-plus-square"></i>
+                    </a>
+                </div>
 
             </div>
+
+
         </footer>
     </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript"></script>
+<script type="text/javascript">
+
+    $('.drop').click(function () {
+        $('.dropDowncontent').toggle("500")
+    })
+
+
+</script>
 
 <script>
 
