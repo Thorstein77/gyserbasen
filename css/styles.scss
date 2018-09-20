@@ -16,6 +16,7 @@ body {
 
 h1 {
   font-family: 'Stardos Stencil', cursive;
+  font-weight: normal;
   color: $sort;
   font-size: 45pt;
   text-align: center;
@@ -59,8 +60,75 @@ img {
 
 }
 
-.videoSlideshow {
+.videoSlideshowContainer {
+  max-width: 1000px;
+  position: relative;
+  margin: auto
+}
 
+.videoSlideshow {
+  display: none;
+}
+
+.naeste, .forrige {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: $hvid;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.naeste {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.forrige:hover, .naeste:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.videoSlideText {
+  color: $hvid;
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+}
+
+.videoSlideNumbertext {
+  color: $hvid;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.videoSlideshowTextContainer {
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 .backGroundImage{
@@ -82,24 +150,66 @@ button{
   cursor: pointer;
 }
 
-button:hover{
+.blog button{
+  background-color: $roedLys;
+  font-family: 'Stardos Stencil', cursive;
+  color: $hvid;
+  border: none;
+  border-radius: 25px;
+  width: 80%;
+  cursor: pointer;
+  margin: 25px 0 50px 0;
+  padding: 8px 0 6px 0;
+
+  a{
+    text-decoration: none;
+    color: $hvid;
+  }
+}
+
+.blog button:hover{
   background-color: $roed;
 }
 
 .blog{
+  h1{
+    color: $hvid;
+    margin-bottom: 5px;
+  }
+  .blogTxt{
+    color: $hvid;
+    position: relative;
+    padding: 60px 10% 0 10%;
+  }
   h3{
     font-family: 'Stardos Stencil', cursive;
+    font-weight: normal;
+    font-size: 18pt;
+    line-height: 21pt;
+    margin-bottom: 10px;
   }
   ol li{
-    font-weight: bold;
     font-family: 'Arial', sans-serif;
-    margin-top: 5px;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  p{
+    font-size: 10pt;
+    line-height: 12pt;
   }
   .flex{
     display: flex;
     justify-content: space-around;
   }
+  img{
+    position: absolute;
+    width: 200px;
+  }
   background-image: url("../images/blogBG.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  margin-top: 40px;
 }
 
 header{
@@ -138,13 +248,52 @@ header{
    a{
      color: $hvid;
      text-decoration: none;
-     
+
    }
  }
 
+footer{
+  background-color: $roedLys;
+  height: auto;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+
+
+  p{
+    color: $hvid;
+  }
+
+
+  .someIkoner{
+    color: $hvid;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  // Alt der ændres i tablet stående fra mobil
+  .blog button{
+    width: 50%;
+  }
+
+}
 
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
+  .blog button{
+    width: 30%;
+  }
+
+  .blog{
+    background-size: 100% auto;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -172,8 +321,24 @@ header{
   }
 
   .menuBar{
-    
+
   }
+  .blog{
+    .blogTxt{
+      padding-top: 40px;
+    }
+    h3{
+      font-size: 20pt;
+      line-height: 24pt;
+      margin-top: 20px;
+    }
+    p{
+      font-size: 12pt;
+      line-height: 15pt;
+    }
+    padding: 30px 15% 0 15%;
+  }
+
 }
 
 @media print {

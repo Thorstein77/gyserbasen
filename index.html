@@ -19,7 +19,7 @@
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -79,40 +79,64 @@
                     NYHEDER
                 </h1>
 
-                <div class="videoSlideshow">
+            <div class="videoSlideshowContainer">
 
+                <div class="videoSlideshow fade">
+                    <div class="videoSlideNumbertext">1 / 3</div>
                     <iframe width="338" height="190" src="https://www.youtube.com/embed/pzD9zGcUNrw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="videoSlideshow fade">
+                        <div class="videoSlideNumbertext">2 / 3</div>
+                        <iframe width="338" height="190" src="https://www.youtube.com/embed/xLCn88bfW1o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="videoSlideshow fade">
+                        <div class="videoSlideNumbertext">3 / 3</div>
+                        <iframe width="338" height="190" src="https://www.youtube.com/embed/89OP78l9oF0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <a class="forrige" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="naeste" onclick="plusSlides(1)">&#10095;</a>
 
                 </div>
 
+                <div class="videoSlideshowTextContainer">
+                    <div class="videoSlideshow fade"><h2>The NUN:O</h2></div>
+                    <div class="videoSlideshow fade"><h2>VENOM :O:O:O</h2></div>
+                    <div class="videoSlideshow fade"><h2>Annihilation :O:o:O</h2></div>
+                </div>
 
             </section>
 
             <section class="blog">
-                <h1>
-                    BLOG
-                </h1>
+                <img src="images/blogBlood.png">
+                <div class="blogTxt">
+                    <h1>
+                        BLOG
+                    </h1>
 
-                <h3>5 gysere du SKAL se dette efterår - i kronologisk rækkefølge</h3>
-                <p>
-                    Er du også vild med blod, mystiske mord, og uforklarlige eksistenser der for svedet til at løbe koldt ned ad ryggen og mangler du noget at lave i de lange kolde timer, mens efterårsmørket lægger sig? 2018 har stadig kvalitets gyserfilm til gode, der er garanteret til at bringe adrenalinen i omløb. Vi har samlet de 5 bedste gysere du SKAL se dette efterår og vinter.
-                </p>
-
-                <ol>
-                    <li><b>The Nun</b></li>
-                        <p>
-                            I dette <i>spinoff</i> at Nattens Dæmoner 2 følger man Fader Burke og en novice der er udsendt af Vatikanet til at stoppe en dæmonisk nonne i Rumænien. Filmen benytter sig, som sine forgængere i franchisen af chokerende elementer og uhyggelig stemning.
-                        </p>
-                    <li><b>Halloween</b></li>
+                    <h3>5 gysere du SKAL se dette efterår – i kronologisk rækkefølge</h3>
                     <p>
-                        Til oktober udkommer Halloween, der er en fortsættelse på 1978’er slasher-gyseren af samme navn, mens handlingen finder sted 40 år senere. Psykopaten Michael Myers er sluppet fri fra den anstalt han har været fængslet i, og søger sit gamle offer, Laurie Strode, der dog nu er klar til at tage kampen op.
+                        Er du også vild med blod, mystiske mord, og uforklarlige eksistenser der for svedet til at løbe koldt ned ad ryggen og mangler du noget at lave i de lange kolde timer, mens efterårsmørket lægger sig? 2018 har stadig kvalitets gyserfilm til gode, der er garanteret til at bringe adrenalinen i omløb. Vi har samlet de 5 bedste gysere du SKAL se dette efterår og vinter.
                     </p>
-                </ol>
 
-                <div class="flex">
-                    <button>
-                        LÆS HELE INDLÆGGET
-                    </button>
+                    <ol>
+                        <li><b>The Nun</b></li>
+                            <p>
+                                I dette <i>spinoff</i> at Nattens Dæmoner 2 følger man Fader Burke og en novice der er udsendt af Vatikanet til at stoppe en dæmonisk nonne i Rumænien. Filmen benytter sig, som sine forgængere i franchisen af chokerende elementer og uhyggelig stemning.
+                            </p>
+                        <li><b>Halloween</b></li>
+                        <p>
+                            Til oktober udkommer Halloween, der er en fortsættelse på 1978’er slasher-gyseren af samme navn, mens handlingen finder sted 40 år senere. Psykopaten Michael Myers er sluppet fri fra den anstalt han har været fængslet i, og søger sit gamle offer, Laurie Strode, der dog nu er klar til at tage kampen op.
+                        </p>
+                    </ol>
+
+                    <div class="flex">
+                        <button><a href="#">
+                            LÆS HELE INDLÆGGET
+                        </a></button>
+                    </div>
                 </div>
             </section>
 
@@ -146,6 +170,8 @@
                 <p>
                     © 2018 Gyser Basen
                 </p>
+
+
             </div>
 
 
@@ -179,7 +205,6 @@
     </div>
 </div>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 
@@ -187,6 +212,35 @@
         $('.dropDowncontent').toggle("500")
     })
 
+
+</script>
+
+<script>
+
+
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("videoSlideshow");
+            var text = document.getElementsByClassName("videoSlideshowTextContainer");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
 
 </script>
 
