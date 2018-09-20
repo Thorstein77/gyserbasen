@@ -7,6 +7,7 @@ body {
 
 h1 {
   font-family: 'Stardos Stencil', cursive;
+  font-weight: normal;
   color: black;
   font-size: 45pt;
   text-align: center; }
@@ -110,29 +111,55 @@ img {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4); }
 
-button {
+.blog button {
   background-color: #501011;
-  color: white;
   font-family: 'Stardos Stencil', cursive;
+  color: white;
   border: none;
   border-radius: 25px;
-  width: 60%;
-  cursor: pointer; }
+  width: 80%;
+  cursor: pointer;
+  margin: 25px 0 50px 0;
+  padding: 8px 0 6px 0; }
+  .blog button a {
+    text-decoration: none;
+    color: white; }
 
-button:hover {
+.blog button:hover {
   background-color: #2d0d10; }
 
 .blog {
-  background-image: url("../images/blogBG.jpg"); }
+  background-image: url("../images/blogBG.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  margin-top: 40px; }
+  .blog h1 {
+    color: white;
+    margin-bottom: 5px; }
+  .blog .blogTxt {
+    color: white;
+    position: relative;
+    padding: 60px 10% 0 10%; }
   .blog h3 {
-    font-family: 'Stardos Stencil', cursive; }
+    font-family: 'Stardos Stencil', cursive;
+    font-weight: normal;
+    font-size: 18pt;
+    line-height: 21pt;
+    margin-bottom: 10px; }
   .blog ol li {
-    font-weight: bold;
     font-family: 'Arial', sans-serif;
-    margin-top: 5px; }
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 15px; }
+  .blog p {
+    font-size: 10pt;
+    line-height: 12pt; }
   .blog .flex {
     display: flex;
     justify-content: space-around; }
+  .blog img {
+    position: absolute;
+    width: 200px; }
 
 header {
   background-color: #501011;
@@ -165,5 +192,27 @@ footer {
     color: white; }
   footer .someIkoner {
     color: white; }
+
+@media screen and (min-width: 768px) {
+  .blog button {
+    width: 50%; } }
+@media screen and (min-width: 992px) {
+  .blog button {
+    width: 30%; }
+
+  .blog {
+    background-size: 100% auto; } }
+@media screen and (min-width: 1200px) {
+  .blog {
+    padding: 30px 15% 0 15%; }
+    .blog .blogTxt {
+      padding-top: 40px; }
+    .blog h3 {
+      font-size: 20pt;
+      line-height: 24pt;
+      margin-top: 20px; }
+    .blog p {
+      font-size: 12pt;
+      line-height: 15pt; } }
 
 /*# sourceMappingURL=styles.css.map */

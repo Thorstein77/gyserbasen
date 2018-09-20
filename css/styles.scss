@@ -16,6 +16,7 @@ body {
 
 h1 {
   font-family: 'Stardos Stencil', cursive;
+  font-weight: normal;
   color: $sort;
   font-size: 45pt;
   text-align: center;
@@ -142,34 +143,66 @@ img {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-button{
+.blog button{
   background-color: $roedLys;
-  color: $hvid;
   font-family: 'Stardos Stencil', cursive;
+  color: $hvid;
   border: none;
   border-radius: 25px;
-  width: 60%;
+  width: 80%;
   cursor: pointer;
+  margin: 25px 0 50px 0;
+  padding: 8px 0 6px 0;
+
+  a{
+    text-decoration: none;
+    color: $hvid;
+  }
 }
 
-button:hover{
+.blog button:hover{
   background-color: $roed;
 }
 
 .blog{
+  h1{
+    color: $hvid;
+    margin-bottom: 5px;
+  }
+  .blogTxt{
+    color: $hvid;
+    position: relative;
+    padding: 60px 10% 0 10%;
+  }
   h3{
     font-family: 'Stardos Stencil', cursive;
+    font-weight: normal;
+    font-size: 18pt;
+    line-height: 21pt;
+    margin-bottom: 10px;
   }
   ol li{
-    font-weight: bold;
     font-family: 'Arial', sans-serif;
-    margin-top: 5px;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  p{
+    font-size: 10pt;
+    line-height: 12pt;
   }
   .flex{
     display: flex;
     justify-content: space-around;
   }
+  img{
+    position: absolute;
+    width: 200px;
+  }
   background-image: url("../images/blogBG.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  margin-top: 40px;
 }
 
 header{
@@ -221,21 +254,44 @@ header{
 
 
 
-
-
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
-
-
+  .blog button{
+    width: 50%;
+  }
 
 }
 
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
+  .blog button{
+    width: 30%;
+  }
+
+  .blog{
+    background-size: 100% auto;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+  .blog{
+    .blogTxt{
+      padding-top: 40px;
+    }
+    h3{
+      font-size: 20pt;
+      line-height: 24pt;
+      margin-top: 20px;
+    }
+    p{
+      font-size: 12pt;
+      line-height: 15pt;
+    }
+    padding: 30px 15% 0 15%;
+  }
+
 }
 
 @media print {
