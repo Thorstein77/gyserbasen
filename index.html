@@ -34,14 +34,38 @@
 
 <div class="backGroundImage">
     <div class="content">
+
+
         <header>
             <div class="logo">
                 <img src="images/Logo_hvid.png">
             </div>
 
-            <div class="menu">
-                <img src="images/menu.png">
-            </div>
+                <div class="menuBar">
+                    <a href="index.html">
+                        Forside
+                    </a>
+                    <a href="blog_underside.html">
+                        Blogs
+                    </a>
+                </div>
+
+
+                <div class="dropDown">
+                    <button class="drop"><img src="images/menu.png"></button>
+
+                    <div class="dropDowncontent">
+                        <a href="index.html">
+                            <p>Forside </p>
+                        </a>
+
+                        <a href="blog_underside.html">
+                            <p> Blogs </p>
+                        </a>
+                    </div>
+
+
+                </div>
         </header>
 
         <main>
@@ -53,40 +77,64 @@
                     NYHEDER
                 </h1>
 
-                <div class="videoSlideshow">
+            <div class="videoSlideshowContainer">
 
+                <div class="videoSlideshow fade">
+                    <div class="videoSlideNumbertext">1 / 3</div>
                     <iframe width="338" height="190" src="https://www.youtube.com/embed/pzD9zGcUNrw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="videoSlideshow fade">
+                        <div class="videoSlideNumbertext">2 / 3</div>
+                        <iframe width="338" height="190" src="https://www.youtube.com/embed/xLCn88bfW1o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="videoSlideshow fade">
+                        <div class="videoSlideNumbertext">3 / 3</div>
+                        <iframe width="338" height="190" src="https://www.youtube.com/embed/89OP78l9oF0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                    <a class="forrige" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="naeste" onclick="plusSlides(1)">&#10095;</a>
 
                 </div>
 
+                <div class="videoSlideshowTextContainer">
+                    <div class="videoSlideshow fade"><h2>The NUN:O</h2></div>
+                    <div class="videoSlideshow fade"><h2>VENOM :O:O:O</h2></div>
+                    <div class="videoSlideshow fade"><h2>Annihilation :O:o:O</h2></div>
+                </div>
 
             </section>
 
             <section class="blog">
-                <h1>
-                    BLOG
-                </h1>
+                <img src="images/blogBlood.png">
+                <div class="blogTxt">
+                    <h1>
+                        BLOG
+                    </h1>
 
-                <h3>5 gysere du SKAL se dette efterår - i kronologisk rækkefølge</h3>
-                <p>
-                    Er du også vild med blod, mystiske mord, og uforklarlige eksistenser der for svedet til at løbe koldt ned ad ryggen og mangler du noget at lave i de lange kolde timer, mens efterårsmørket lægger sig? 2018 har stadig kvalitets gyserfilm til gode, der er garanteret til at bringe adrenalinen i omløb. Vi har samlet de 5 bedste gysere du SKAL se dette efterår og vinter.
-                </p>
-
-                <ol>
-                    <li><b>The Nun</b></li>
-                        <p>
-                            I dette <i>spinoff</i> at Nattens Dæmoner 2 følger man Fader Burke og en novice der er udsendt af Vatikanet til at stoppe en dæmonisk nonne i Rumænien. Filmen benytter sig, som sine forgængere i franchisen af chokerende elementer og uhyggelig stemning.
-                        </p>
-                    <li><b>Halloween</b></li>
+                    <h3>5 gysere du SKAL se dette efterår – i kronologisk rækkefølge</h3>
                     <p>
-                        Til oktober udkommer Halloween, der er en fortsættelse på 1978’er slasher-gyseren af samme navn, mens handlingen finder sted 40 år senere. Psykopaten Michael Myers er sluppet fri fra den anstalt han har været fængslet i, og søger sit gamle offer, Laurie Strode, der dog nu er klar til at tage kampen op.
+                        Er du også vild med blod, mystiske mord, og uforklarlige eksistenser der for svedet til at løbe koldt ned ad ryggen og mangler du noget at lave i de lange kolde timer, mens efterårsmørket lægger sig? 2018 har stadig kvalitets gyserfilm til gode, der er garanteret til at bringe adrenalinen i omløb. Vi har samlet de 5 bedste gysere du SKAL se dette efterår og vinter.
                     </p>
-                </ol>
 
-                <div class="flex">
-                    <button>
-                        LÆS HELE INDLÆGGET
-                    </button>
+                    <ol>
+                        <li><b>The Nun</b></li>
+                            <p>
+                                I dette <i>spinoff</i> at Nattens Dæmoner 2 følger man Fader Burke og en novice der er udsendt af Vatikanet til at stoppe en dæmonisk nonne i Rumænien. Filmen benytter sig, som sine forgængere i franchisen af chokerende elementer og uhyggelig stemning.
+                            </p>
+                        <li><b>Halloween</b></li>
+                        <p>
+                            Til oktober udkommer Halloween, der er en fortsættelse på 1978’er slasher-gyseren af samme navn, mens handlingen finder sted 40 år senere. Psykopaten Michael Myers er sluppet fri fra den anstalt han har været fængslet i, og søger sit gamle offer, Laurie Strode, der dog nu er klar til at tage kampen op.
+                        </p>
+                    </ol>
+
+                    <div class="flex">
+                        <button><a href="#">
+                            LÆS HELE INDLÆGGET
+                        </a></button>
+                    </div>
                 </div>
             </section>
 
@@ -162,19 +210,43 @@
 
             </div>
 
+
+
             <div class="someIkoner">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-google-plus-square"></i>
+
+                <div class="facebookIkon">
+
+                    <a href="https://da-dk.facebook.com/login/"><i class="fab fa-facebook-square"></i>
+                    </a>
+                </div>
+
+
+                <div class="twitterIkon">
+
+                    <a href="https://twitter.com/login?lang=da"><i class="fab fa-twitter-square"></i>
+                    </a>
+                </div>
+
+
+                <div class="googleIkon">
+
+                    <a href="https://plus.google.com/discover"><i class="fab fa-google-plus-square"></i>
+                    </a>
+                </div>
 
             </div>
+
+
         </footer>
     </div>
 </div>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
+
+    $('.drop').click(function () {
+        $('.dropDowncontent').toggle("500")
+    })
 
     $(document).ready(function (e) {
         $(function () {
@@ -188,6 +260,35 @@
                 2000); // slide duration
         });
     })
+
+</script>
+
+<script>
+
+
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("videoSlideshow");
+            var text = document.getElementsByClassName("videoSlideshowTextContainer");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
 
 </script>
 
