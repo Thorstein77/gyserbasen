@@ -327,7 +327,7 @@ footer{
   }
 }
 
-.genreSlide{
+@mixin genreSlideMix(){
   width: 100%;
   height: 400px;
   background-color: $roed;
@@ -338,16 +338,37 @@ footer{
     margin: 0 auto;
     padding: 5% 0 0 0;
   }
+}
+
+@mixin genreSlideMobileMix (){
+  background-color: $roedLys;
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  color: $hvid;
+  overflow: hidden;
+}
+
+.genreSlide{
+  @include genreSlideMix;
 
   .genreSlideMobile{
-    background-color: $roedLys;
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-    color: $hvid;
+    @include genreSlideMobileMix;
   }
 }
 
+.genreSlide2{
+  @include genreSlideMix;
+  margin: 7% auto 0 auto;
+
+  .genreSlideMobile2{
+    @include genreSlideMobileMix;
+  }
+}
+
+.genreSlideWeb{
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
@@ -399,6 +420,26 @@ h1 {
   }
 
 
+  .genreSlide, .genreSlide2{
+    display: none;
+  }
+
+  .genreSlideWeb{
+    display: block;
+  }
+
+  .genreSlideWebObject{
+
+
+    .flex{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      width: 100%;
+      background-color: $roed;
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
