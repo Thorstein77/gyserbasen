@@ -114,15 +114,15 @@ img {
   background-color: rgba(255, 255, 255, 0.4); }
 
 button {
-    color: white;
-    font-family: 'Stardos Stencil', cursive;
-    border: none;
-    cursor: pointer; }
-
+  color: white;
+  font-family: 'Stardos Stencil', cursive;
+  border: none;
+  cursor: pointer; }
 
 .blog button {
   background-color: #501011;
   font-family: 'Stardos Stencil', cursive;
+  color: white;
   border: none;
   border-radius: 25px;
   width: 80%;
@@ -199,32 +199,17 @@ header {
     color: white;
     text-decoration: none; }
 
-@media screen and (min-width: 1200px) {
-  .dropDown {
-    display: none; }
-
-  header {
-    height: 100px;
-    padding: 20px; }
-    header a {
-      color: white;
-      text-decoration: none; }
-
-  .logo {
-    height: 20%;
-    width: 20%; } }
-
 footer {
-    background-color: #501011;
-    height: auto;
-    width: 100%;
-    flex-direction: row;
-    display: flex;
-    padding: 12px;
-    justify-content: space-between; }
-footer p {
+  background-color: #501011;
+  height: auto;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  padding: 12px;
+  justify-content: space-between; }
+  footer p {
     color: white; }
-footer .someIkoner {
+  footer .someIkoner {
     color: white; }
 
 .genreSlide {
@@ -241,7 +226,29 @@ footer .someIkoner {
     display: block;
     width: 60%;
     margin: 0 auto;
-    color: white; }
+    color: white;
+    overflow: hidden; }
+
+.genreSlide2 {
+  width: 100%;
+  height: 400px;
+  background-color: #2d0d10;
+  margin: 7% auto 0 auto; }
+  .genreSlide2 h2 {
+    color: white;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5% 0 0 0; }
+  .genreSlide2 .genreSlideMobile2 {
+    background-color: #501011;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+    overflow: hidden; }
+
+.genreSlideWeb {
+  display: none; }
 
 @media screen and (min-width: 768px) {
   .blog button {
@@ -251,8 +258,35 @@ footer .someIkoner {
     width: 30%; }
 
   .blog {
-    background-size: 100% auto; } }
+    background-size: 100% auto; }
+
+  .genreSlide, .genreSlide2 {
+    display: none; }
+
+  .genreSlideWeb {
+    display: block; }
+
+  .genreSlideWebObject .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #2d0d10; } }
 @media screen and (min-width: 1200px) {
+  .dropDown {
+    display: none; }
+
+  header {
+    height: 100px;
+    padding: 20px; }
+    header a {
+      color: white;
+      text-decoration: none; }
+
+  .logo {
+    height: 20%;
+    width: 20%; }
+
   .blog {
     padding: 30px 15% 0 15%; }
     .blog .blogTxt {
