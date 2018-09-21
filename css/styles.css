@@ -9,17 +9,18 @@ h1 {
   font-family: 'Stardos Stencil', cursive;
   font-weight: normal;
   color: black;
-  font-size: 45pt;
-  text-align: center; }
+  font-size: 22pt;
+  text-align: center;
+  padding: 30px 0 0 0; }
 
 h2 {
   font-family: 'Stardos Stencil', cursive;
+  font-weight: normal;
   color: white;
-  font-size: 20pt; }
+  font-size: 17pt; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0; }
+  margin: 0; }
 
 ul, ol {
   margin: 0;
@@ -40,9 +41,8 @@ img {
   height: auto; }
 
 .videoSlideshowContainer {
-  max-width: 1000px;
-  position: relative;
-  margin: auto; }
+  max-width: 700px;
+  position: relative; }
 
 .videoSlideshow {
   display: none; }
@@ -50,7 +50,7 @@ img {
 .naeste, .forrige {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 35%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -81,10 +81,6 @@ img {
   position: absolute;
   top: 0; }
 
-.videoSlideshowTextContainer {
-  display: inline-block;
-  transition: background-color 0.6s ease; }
-
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -101,6 +97,19 @@ img {
     opacity: .4; }
   to {
     opacity: 1; } }
+.responsive-video {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative; }
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .backGroundImage {
   width: 100vw;
   background-image: url("../images/darkBG.jpg");
@@ -169,6 +178,27 @@ button {
     position: absolute;
     width: 200px; }
 
+.kommentar {
+  width: 100%;
+  height: auto;
+  background-color: #2d0d10;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-decoration: white; }
+
+form {
+  border-bottom-color: #2d0d10;
+  margin: 0 auto; }
+
+button {
+  background-color: #501011;
+  font-family: 'Stardos Stencil', cursive;
+  color: white;
+  border: none;
+  border-radius: 25px; }
+
 header {
   background-color: #501011;
   width: 100%;
@@ -177,6 +207,9 @@ header {
   display: flex;
   padding: 15px;
   justify-content: space-between; }
+
+.menuBar {
+  display: none; }
 
 .logo {
   height: 50%;
@@ -209,6 +242,18 @@ footer {
   justify-content: space-between; }
   footer p {
     color: white; }
+
+  footer .someIkoner_mobil {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 15%; }
+    footer .someIkoner_mobil a {
+      color: white; }
+  footer .someIkoner_web {
+    display: none; }
+
   footer .someIkoner {
     color: white; }
 
@@ -250,10 +295,12 @@ footer {
 .genreSlideWeb {
   display: none; }
 
+
 @media screen and (min-width: 768px) {
   .blog button {
     width: 50%; } }
 @media screen and (min-width: 992px) {
+
   .blog button {
     width: 30%; }
 
@@ -284,10 +331,69 @@ footer {
       text-decoration: none; }
 
   .logo {
+    height: 30%;
+    width: 30%;
+    padding-left: 10%; }
+
+  .menuBar {
+    display: block;
+    padding-right: 10%;
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    margin-top: 53px; }
+
+  .blog {
+
+  h1 {
+    font-size: 38pt; }
+
+  .nyheder {
+    display: grid;
+    grid-template-rows: 30px auto;
+    grid-template-columns: 700px 8px 284px 8px; }
+
+  .nyhederOverskrift {
+    grid-column: 3; }
+
+  .videoSlideshowContainer {
+    grid-column: 1;
+    grid-row: 2; }
+
+  .videoSlideText {
+    display: none; }
+
+  .beskrivelseGraaBoks {
+    grid-column: 3;
+    grid-row: 2;
+    background-color: #424242;
+    border-radius: 5px;
+    margin: 90px 0 0 0; }
+
+  .blog button {
+    width: 30%; }
+
+  .blog {
+    background-size: 100% auto; } }
+@media screen and (min-width: 1200px) {
+  .dropDown {
+    display: none; }
+
+  header {
+    height: 100px;
+    padding: 20px; }
+    header a {
+      color: white;
+      text-decoration: none; }
+
+  .logo {
     height: 20%;
     width: 20%; }
 
   .blog {
+>>>>>>> 07327def81438eac5d2ac9419df0b5b4bd182a7f
     padding: 30px 15% 0 15%; }
     .blog .blogTxt {
       padding-top: 40px; }
@@ -297,6 +403,18 @@ footer {
       margin-top: 20px; }
     .blog p {
       font-size: 12pt;
-      line-height: 15pt; } }
+      line-height: 15pt; }
+
+  footer {
+    padding-right: 10%;
+    padding-left: 10%; }
+
+  .someIkoner_web {
+    display: block;
+    height: auto;
+    width: 10%; }
+
+  .someIkoner_mobil {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
