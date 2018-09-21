@@ -242,6 +242,7 @@ footer {
   justify-content: space-between; }
   footer p {
     color: white; }
+
   footer .someIkoner_mobil {
     color: white;
     display: flex;
@@ -252,6 +253,9 @@ footer {
       color: white; }
   footer .someIkoner_web {
     display: none; }
+
+  footer .someIkoner {
+    color: white; }
 
 .genreSlide {
   width: 100%;
@@ -269,10 +273,45 @@ footer {
     margin: 0 auto;
     color: white; }
 
+
 @media screen and (min-width: 768px) {
   .blog button {
     width: 50%; } }
 @media screen and (min-width: 992px) {
+
+  .blog button {
+    width: 30%; }
+
+  .blog {
+    background-size: 100% auto; } }
+@media screen and (min-width: 1200px) {
+  .dropDown {
+    display: none; }
+
+  header {
+    height: 100px;
+    padding: 20px; }
+    header a {
+      color: white;
+      text-decoration: none; }
+
+  .logo {
+    height: 30%;
+    width: 30%;
+    padding-left: 10%; }
+
+  .menuBar {
+    display: block;
+    padding-right: 10%;
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    margin-top: 53px; }
+
+  .blog {
+
   h1 {
     font-size: 38pt; }
 
@@ -315,21 +354,11 @@ footer {
       text-decoration: none; }
 
   .logo {
-    height: 30%;
-    width: 30%;
-    padding-left: 10%; }
-
-  .menuBar {
-    display: block;
-    padding-right: 10%;
-    width: 300px;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    font-size: large;
-    margin-top: 53px; }
+    height: 20%;
+    width: 20%; }
 
   .blog {
+>>>>>>> 07327def81438eac5d2ac9419df0b5b4bd182a7f
     padding: 30px 15% 0 15%; }
     .blog .blogTxt {
       padding-top: 40px; }
