@@ -212,6 +212,31 @@ button{
   margin-top: 40px;
 }
 
+.kommentar{
+  width: 100%;
+  height: auto;
+  background-color: $roed;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-decoration: $hvid;
+}
+
+form{
+  border-bottom-color: $roed;
+  margin: 0 auto;
+
+}
+
+button{
+  background-color: $roedLys;
+  font-family: 'Stardos Stencil', cursive;
+  color: $hvid;
+  border: none;
+  border-radius: 25px;
+}
+
 header{
   background-color: $roedLys;
   width: 100%;
@@ -220,6 +245,10 @@ header{
   display: flex;
   padding: 15px;
   justify-content: space-between;
+}
+
+.menuBar{
+  display: none;
 }
 
 .logo{
@@ -267,10 +296,22 @@ footer{
   }
 
 
-  .someIkoner{
+  .someIkoner_mobil{
+    color: $hvid;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 15%;
+
+  a{
     color: $hvid;
   }
 
+  }
+
+  .someIkoner_web{
+    display: none;
+  }
 }
 
 
@@ -299,6 +340,7 @@ footer{
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
 
+
   .dropDown{
    display: none;
  }
@@ -315,14 +357,25 @@ footer{
   }
 
   .logo{
-    height: 20%;
-    width: 20%;
+    height: 30%;
+    width: 30%;
+    padding-left: 10%;
 
   }
 
   .menuBar{
+    display: block;
+    padding-right: 10%;
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    margin-top: 53px;
 
   }
+
+
   .blog{
     .blogTxt{
       padding-top: 40px;
@@ -339,6 +392,19 @@ footer{
     padding: 30px 15% 0 15%;
   }
 
+  footer{
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+.someIkoner_web{
+  display: block;
+  height: auto;
+  width: 10%;
+}
+
+  .someIkoner_mobil{
+    display: none;
+  }
 }
 
 @media print {
