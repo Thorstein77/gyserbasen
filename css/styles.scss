@@ -426,6 +426,9 @@ h1 {
 
   .genreSlideWeb{
     display: block;
+
+    color: $hvid;
+    background-color: $roed;
   }
 
   .genreSlideWebObject{
@@ -437,7 +440,10 @@ h1 {
       justify-content: space-around;
 
       width: 100%;
-      background-color: $roed;
+
+      div{
+        background-color: $roedLys;
+      }
     }
   }
 }

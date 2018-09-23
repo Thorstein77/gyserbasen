@@ -239,17 +239,47 @@
 
                     <div class="genreSlideWeb">
                         <div class="genreSlideWebObject">
+                            <h2>
+                                Gyser
+                            </h2>
+
                             <div class="flex">
                                 <div>
-                                    hej
+                                    <img src="images/kat1.jpg">
+                                    tekst <br> her <br> tak
                                 </div>
 
                                 <div>
-                                    hej
+                                    <img src="images/kat2.jpeg">
+                                    tekst <br> her <br> tak
                                 </div>
 
                                 <div>
-                                    hej
+                                    <img src="images/kat3.jpeg">
+                                    tekst <br> her <br> tak
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="genreSlideWebObject">
+                            <h2>
+                                Action / Gyser
+                            </h2>
+
+                            <div class="flex">
+                                <div>
+                                    <img src="images/kat3.jpeg">
+                                    tekst <br> her <br> tak
+                                </div>
+
+                                <div>
+                                    <img src="images/kat1.jpg">
+                                    tekst <br> her <br> tak
+                                </div>
+
+                                <div>
+                                    <img src="images/kat2.jpeg">
+                                    tekst <br> her <br> tak
                                 </div>
                             </div>
                         </div>
@@ -369,6 +399,22 @@
             slides2[slideIndex2-1].style.display = "block";
             setTimeout(showSlides2, 2000);
         }
+
+        var slideIndexW = 0;
+        showSlidesW();
+
+        function showSlidesW(){
+            var w;
+            var slidesW = document.getElementsByClassName("genreSlideWebObject");
+            for (w = 0; w < slidesW.length; w++){
+                slidesW[w].style.display = "none";
+            }
+            slideIndexW++;
+            if (slideIndexW > slidesW.length){slideIndexW = 1}
+            slidesW[slideIndexW-1].style.display = "block";
+            setTimeout(showSlidesW, 2000);
+        }
+
     })
 
 </script>
