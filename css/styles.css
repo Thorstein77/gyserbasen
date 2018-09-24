@@ -8,7 +8,7 @@ body {
 h1 {
   font-family: 'Stardos Stencil', cursive;
   font-weight: normal;
-  color: black;
+  color: white;
   font-size: 22pt;
   text-align: center;
   padding: 30px 0 0 0; }
@@ -41,7 +41,7 @@ img {
   height: auto; }
 
 .videoSlideshowContainer {
-  max-width: 700px;
+  max-width: 992px;
   position: relative; }
 
 .videoSlideshow {
@@ -73,6 +73,9 @@ img {
   padding: 8px 12px;
   bottom: 8px;
   width: 100%; }
+
+.videoSlideTextWeb {
+  display: none; }
 
 .videoSlideNumbertext {
   color: white;
@@ -149,7 +152,8 @@ button {
   background-image: url("../images/blogBG.jpg");
   background-repeat: no-repeat;
   background-size: auto 100%;
-  margin-top: 40px; }
+  margin-top: 40px;
+  background-position: center; }
   .blog h1 {
     color: white;
     margin-bottom: 5px; }
@@ -184,8 +188,8 @@ button {
   background-color: #2d0d10;
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 20px;
-  padding: 10px;
+  margin-bottom: 50px;
+  padding: 0 0 20px 0;
   text-decoration: white; }
 
 form {
@@ -197,7 +201,71 @@ button {
   font-family: 'Stardos Stencil', cursive;
   color: white;
   border: none;
-  border-radius: 25px; }
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+button:hover {
+  background-color: #2d0d10; }
+
+.date1 {
+  color: white;
+  font-size: xx-small;
+  padding-left: 20px; }
+
+.date2 {
+  color: white;
+  font-size: xx-small;
+  padding-left: 20px; }
+
+.kommentar1 {
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  background-color: #501011;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px; }
+
+.billedeTilkommentar1 {
+  color: white;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin: 10px;
+  margin-left: -50px; }
+
+.txtTilkomentar1 {
+  color: white;
+  font-size: smaller;
+  padding: 10px;
+  text-align: left;
+  width: 90%; }
+
+.kommentar2 {
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  background-color: #501011;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding-top: 10px; }
+
+.billedeTilkommentar2 {
+  color: white;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin: 10px;
+  margin-left: -50px; }
+
+.txtTilkomentar2 {
+  color: white;
+  font-size: smaller;
+  padding: 10px;
+  text-align: left;
+  width: 90%; }
 
 header {
   background-color: #501011;
@@ -303,10 +371,11 @@ footer {
   .nyheder {
     display: grid;
     grid-template-rows: 30px auto;
-    grid-template-columns: 700px 8px 284px 8px; }
+    grid-template-columns: 70% 30%; }
 
   .nyhederOverskrift {
-    grid-column: 3; }
+    grid-column: 2;
+    grid-row: 2; }
 
   .videoSlideshowContainer {
     grid-column: 1;
@@ -315,18 +384,28 @@ footer {
   .videoSlideText {
     display: none; }
 
+  .videoSlideTextWeb {
+    display: grid;
+    color: white; }
+
+  .naeste, .forrige {
+    top: 50%; }
+
   .beskrivelseGraaBoks {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
+    width: 94%;
     background-color: #424242;
     border-radius: 5px;
-    margin: 90px 0 0 0; }
+    margin: 100px 0 0 0;
+    padding: 20px 15px 15px 15px;
+    justify-self: center; }
 
   .blog button {
     width: 30%; }
 
   .blog {
-    background-size: 100% auto; }
+    background-size: 100% 100%; }
 
   .genreSlide, .genreSlide2 {
     display: none; }
@@ -392,6 +471,10 @@ footer {
     .blog p {
       font-size: 12pt;
       line-height: 15pt; }
+
+  .kommentarContent {
+    width: 80%;
+    margin: 0 auto; }
 
   footer {
     padding-right: 10%;
