@@ -105,7 +105,7 @@
                             <div class="responsive-video">
                                 <iframe width="720" height="405" src="https://www.youtube.com/embed/89OP78l9oF0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
-                        <div class="videoSlideText"><h2>Annihilation :O</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen.</p></div>
+                        <div class="videoSlideText"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen.</p></div>
 
                     </div>
 
@@ -115,7 +115,9 @@
                 </div>
 
                 <div class="beskrivelseGraaBoks">
-
+                    <div class="videoSlideTextWeb"><h2>The Nun er nu i biograferne</h2><br><p>Se traileren her!</p></div>
+                    <div class="videoSlideTextWeb"><h2>Ny Venom trailer</h2><br><p>Der er udgivet en ny Venom trailer! Se den her.</p></div>
+                    <div class="videoSlideTextWeb"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen.</p></div>
                 </div>
 
             </section>
@@ -165,33 +167,15 @@
 
                             <div class="genreSlideMobile">
                                 <div class="genreSlideObject">
-                                    <img src="images/kat1.jpg">
-
-                                    <p class="acionHorror" id="genre2-1">
-                                    <h3>test</h3>
-                                    <h4>aldersgrænse</h4>
-                                    kat1
-                                    </p>
+                                    <div class="genre1-1"></div>
                                 </div>
 
                                 <div class="genreSlideObject">
-                                    <img src="images/kat2.jpeg">
-
-                                    <p class="acionHorror" id="genre2-2">
-                                    <h3>test</h3>
-                                    <h4>aldersgrænse</h4>
-                                    kat2
-                                    </p>
+                                    <div class="genre1-2"></div>
                                 </div>
 
                                 <div class="genreSlideObject">
-                                    <img src="images/kat3.jpeg">
-
-                                    <p class="acionHorror" id="genre2-3">
-                                    <h3>test</h3>
-                                    <h4>aldersgrænse</h4>
-                                    kat3
-                                    </p>
+                                    <div class="genre1-3"></div>
                                 </div>
                             </div>
                         </div>
@@ -207,7 +191,7 @@
                                 <div class="genreSlideObject2">
                                     <img src="images/kat1.jpg">
 
-                                    <p class="acionHorror" id="genre1-1">
+                                    <p class="acionHorror" >
                                     <h3>test</h3>
                                     <h4>aldersgrænse</h4>
                                     kat1
@@ -240,47 +224,29 @@
                     <div class="genreSlideWeb">
                         <div class="genreSlideWebObject">
                             <h2>
-                                Gyser
+                                GYSER
                             </h2>
 
                             <div class="flex">
-                                <div>
-                                    <img src="images/kat1.jpg">
-                                    tekst <br> her <br> tak
-                                </div>
+                                <div class="genre1-1"></div>
 
-                                <div>
-                                    <img src="images/kat2.jpeg">
-                                    tekst <br> her <br> tak
-                                </div>
+                                <div class="genre1-2"></div>
 
-                                <div>
-                                    <img src="images/kat3.jpeg">
-                                    tekst <br> her <br> tak
-                                </div>
+                                <div class="genre1-3"></div>
                             </div>
                         </div>
 
                         <div class="genreSlideWebObject">
                             <h2>
-                                Action / Gyser
+                                ACTION / GYSER
                             </h2>
 
                             <div class="flex">
-                                <div>
-                                    <img src="images/kat3.jpeg">
-                                    tekst <br> her <br> tak
-                                </div>
+                                <div class="genre2-1"></div>
 
-                                <div>
-                                    <img src="images/kat1.jpg">
-                                    tekst <br> her <br> tak
-                                </div>
+                                <div class="genre2-2"></div>
 
-                                <div>
-                                    <img src="images/kat2.jpeg">
-                                    tekst <br> her <br> tak
-                                </div>
+                                <div class="genre2-3"></div>
                             </div>
                         </div>
                     </div>
@@ -370,19 +336,19 @@
     })
 
     $(document).ready(function (e) {
-        var slideIndex = 0;
-        showSlides();
+        var slideIndex1 = 0;
+        showSlides1();
 
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("genreSlideObject");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+        function showSlides1() {
+            var m;
+            var slides1 = document.getElementsByClassName("genreSlideObject");
+            for (m = 0; m < slides1.length; m++) {
+                slides1[m].style.display = "none";
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
+            slideIndex1++;
+            if (slideIndex1 > slides1.length) {slideIndex1 = 1}
+            slides1[slideIndex1-1].style.display = "block";
+            setTimeout(showSlides1, 2000); // Change image every 2 seconds
         }
 
         var slideIndex2 = 0;
@@ -412,11 +378,189 @@
             slideIndexW++;
             if (slideIndexW > slidesW.length){slideIndexW = 1}
             slidesW[slideIndexW-1].style.display = "block";
-            setTimeout(showSlidesW, 2000);
+            setTimeout(showSlidesW, 5000);
         }
 
-    })
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "https://api.themoviedb.org/3/movie/439079",
+            data: {
+                'api_key': '64b4491b45f63114a604290efac3e4e8',
+                'language': 'da_DA'
+            },
+            success: function(result) {
+                console.log(result);
 
+                $(".genre1-1").html("<img src='https://image.tmdb.org/t/p/w342"
+                    + result.poster_path + "'>");
+
+                $(".genre1-1").append("<br><h3>" + result.title + " " +
+                    "<br>(" + result.release_date + ") </h3><br>" + "Rating: "
+                    +result.vote_average + "/10" + "<br><br><b>Genres: </b>");
+                $.each(result.genres, function (k, v) {
+                    if(++k > 3) {
+                        return false;
+                    }
+                    $(".genre1-1").append("<br>" + v.name);
+                })
+                $(".genre1-1").append("<br><a href='#'>Læs Mere ...</a>")
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "https://api.themoviedb.org/3/movie/2667",
+            data: {
+                'api_key': '64b4491b45f63114a604290efac3e4e8',
+                'language': 'da_DA'
+            },
+            success: function(result) {
+                console.log(result);
+
+                $(".genre1-2").html("<img src='https://image.tmdb.org/t/p/w342"
+                    + result.poster_path + "'>");
+
+                $(".genre1-2").append("<br><h3>" + result.title + " " +
+                    "<br>(" + result.release_date + ") </h3><br>" + "Rating: "
+                    +result.vote_average + "/10" + "<br><br><b>Genres: </b>");
+                $.each(result.genres, function (k, v) {
+                    if(++k > 3) {
+                        return false;
+                    }
+                    $(".genre1-2").append("<br>" + v.name);
+                })
+                $(".genre1-2").append("<br><a href='#'>Læs Mere ...</a>")
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "https://api.themoviedb.org/3/movie/346364",
+            data: {
+                'api_key': '64b4491b45f63114a604290efac3e4e8',
+                'language': 'da_DA'
+            },
+            success: function(result) {
+                console.log(result);
+
+                $(".genre1-3").html("<img src='https://image.tmdb.org/t/p/w342"
+                    + result.poster_path + "'>");
+
+                $(".genre1-3").append("<br><h3>" + result.title + " " +
+                    "<br>(" + result.release_date + ") </h3><br>" + "Rating: "
+                    +result.vote_average + "/10" + "<br><br><b>Genres: </b>");
+                $.each(result.genres, function (k, v) {
+                    if(++k > 3) {
+                        return false;
+                    }
+                    $(".genre1-3").append("<br>" + v.name);
+                })
+                $(".genre1-3").append("<br><a href='#'>Læs Mere ...</a>")
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "https://api.themoviedb.org/3/movie/335983",
+            data: {
+                'api_key': '64b4491b45f63114a604290efac3e4e8',
+                'language': 'da_DA'
+            },
+            success: function(result) {
+                console.log(result);
+
+                $(".genre2-1").html("<img src='https://image.tmdb.org/t/p/w342"
+                    + result.poster_path + "'>");
+
+                $(".genre2-1").append("<br><h3>" + result.title + " " +
+                    "<br>(" + result.release_date + ") </h3><br>" + "Rating: "
+                    +result.vote_average + "/10" + "<br><br><b>Genres: </b>");
+                $.each(result.genres, function (k, v) {
+                    if(++k > 3) {
+                        return false;
+                    }
+                    $(".genre2-1").append("<br>" + v.name);
+                })
+                $(".genre2-1").append("<br><a href='#'>Læs Mere ...</a>")
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "https://api.themoviedb.org/3/movie/485415",
+            data: {
+                'api_key': '64b4491b45f63114a604290efac3e4e8',
+                'language': 'da_DA'
+            },
+            success: function(result) {
+                console.log(result);
+
+                $(".genre2-2").html("<img src='https://image.tmdb.org/t/p/w342"
+                    + result.poster_path + "'>");
+
+                $(".genre2-2").append("<br><h3>" + result.title + " " +
+                    "<br>(" + result.release_date + ") </h3><br>" + "Rating: "
+                    +result.vote_average + "/10" + "<br><br><b>Genres: </b>");
+                $.each(result.genres, function (k, v) {
+                    if(++k > 3) {
+                        return false;
+                    }
+                    $(".genre2-2").append("<br>" + v.name);
+                })
+                $(".genre2-2").append("<br><a href='#'>Læs Mere ...</a>")
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "https://api.themoviedb.org/3/movie/381237",
+            data: {
+                'api_key': '64b4491b45f63114a604290efac3e4e8',
+                'language': 'da_DA'
+            },
+            success: function(result) {
+                console.log(result);
+
+                $(".genre2-3").html("<img src='https://image.tmdb.org/t/p/w342"
+                    + result.poster_path + "'>");
+
+                $(".genre2-3").append("<br><h3>" + result.title + " " +
+                    "<br>(" + result.release_date + ") </h3><br>" + "Rating: "
+                    +result.vote_average + "/10" + "<br><br><b>Genres: </b>");
+                $.each(result.genres, function (k, v) {
+                    if(++k > 3) {
+                        return false;
+                    }
+                    $(".genre2-3").append("<br>" + v.name);
+                })
+                $(".genre2-3").append("<br><a href='#'>Læs Mere ...</a>")
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+    })
 </script>
 
 <script>
@@ -432,7 +576,7 @@
 
         function currentSlide(n) {
             showSlides(slideIndex = n);
-        }
+        }   
 
         function showSlides(n) {
             var i;
