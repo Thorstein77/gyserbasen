@@ -18,19 +18,21 @@ h1 {
   font-family: 'Stardos Stencil', cursive;
   font-weight: normal;
   color: $sort;
-  font-size: 45pt;
+  font-size: 22pt;
   text-align: center;
+  padding: 30px 0 0 0;
 }
 
 h2 {
   font-family: 'Stardos Stencil', cursive;
+  font-weight: normal;
   color: $hvid;
-  font-size: 20pt;
+  font-size: 17pt;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; // Ingen ydre margen fra overskrifter
-  padding: 0; // Ingen indre margen fra overskrifter
+   // Ingen indre margen fra overskrifter
 }
 
 ul, ol {
@@ -61,9 +63,8 @@ img {
 }
 
 .videoSlideshowContainer {
-  max-width: 1000px;
+  max-width: 700px;
   position: relative;
-  margin: auto
 }
 
 .videoSlideshow {
@@ -73,7 +74,7 @@ img {
 .naeste, .forrige {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 35%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -109,11 +110,6 @@ img {
   top: 0;
 }
 
-.videoSlideshowTextContainer {
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -131,16 +127,40 @@ img {
   to {opacity: 1}
 }
 
+.responsive-video {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .backGroundImage{
+  width: 100vw;
   background-image: url("../images/darkBG.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .content{
+  display: block;
   width: 90%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+button{
+  color: $hvid;
+  font-family: 'Stardos Stencil', cursive;
+  border: none;
+  cursor: pointer;
 }
 
 .blog button{
@@ -205,6 +225,31 @@ img {
   margin-top: 40px;
 }
 
+.kommentar{
+  width: 100%;
+  height: auto;
+  background-color: $roed;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-decoration: $hvid;
+}
+
+form{
+  border-bottom-color: $roed;
+  margin: 0 auto;
+
+}
+
+button{
+  background-color: $roedLys;
+  font-family: 'Stardos Stencil', cursive;
+  color: $hvid;
+  border: none;
+  border-radius: 25px;
+}
+
 header{
   background-color: $roedLys;
   width: 100%;
@@ -215,21 +260,41 @@ header{
   justify-content: space-between;
 }
 
+.menuBar{
+  display: none;
+}
+
 .logo{
   height: 50%;
   width: 50%;
 
 }
 
-.menu{
-  height: 15%;
-  width: 15%;
-  float: right;
-  padding-top: 12px;
-
+.drop{
+  background-color: transparent;
 }
 
-  footer{
+ .dropDowncontent{
+   display: none;
+   height: auto;
+   width: 90%;
+   background-color: transparent;
+   line-height: 60px;
+   font-size: x-large;
+   text-align: left;
+
+   button:hover{
+     background-color: transparent;
+   }
+
+   a{
+     color: $hvid;
+     text-decoration: none;
+
+   }
+ }
+
+footer{
   background-color: $roedLys;
   height: auto;
   width: 100%;
@@ -244,15 +309,66 @@ header{
   }
 
 
-  .someIkoner{
+  .someIkoner_mobil{
+    color: $hvid;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 15%;
+
+  a{
     color: $hvid;
   }
 
+  }
+
+  .someIkoner_web{
+    display: none;
+  }
 }
 
+@mixin genreSlideMix(){
+  width: 100%;
+  height: 400px;
+  background-color: $roed;
 
+  h2{
+    color: $hvid;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5% 0 0 0;
+  }
+}
 
+@mixin genreSlideMobileMix (){
+  background-color: $roedLys;
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  color: $hvid;
+  overflow: hidden;
+}
 
+.genreSlide{
+  @include genreSlideMix;
+
+  .genreSlideMobile{
+    @include genreSlideMobileMix;
+  }
+}
+
+.genreSlide2{
+  @include genreSlideMix;
+  margin: 7% auto 0 auto;
+
+  .genreSlideMobile2{
+    @include genreSlideMobileMix;
+  }
+}
+
+.genreSlideWeb{
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
@@ -264,6 +380,37 @@ header{
 
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
+h1 {
+  font-size: 38pt;
+}
+
+.nyheder {
+  display: grid;
+  grid-template-rows: 30px auto;
+  grid-template-columns: 700px 8px 284px 8px;
+}
+
+.nyhederOverskrift {
+  grid-column: 3;
+}
+
+.videoSlideshowContainer {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.videoSlideText {
+  display: none;
+}
+
+.beskrivelseGraaBoks {
+  grid-column: 3;
+  grid-row: 2;
+  background-color: #424242;
+  border-radius: 5px;
+  margin: 90px 0 0 0;
+}
+
   .blog button{
     width: 30%;
   }
@@ -272,10 +419,74 @@ header{
     background-size: 100% auto;
   }
 
+
+  .genreSlide, .genreSlide2{
+    display: none;
+  }
+
+  .genreSlideWeb{
+    display: block;
+
+    color: $hvid;
+    background-color: $roed;
+  }
+
+  .genreSlideWebObject{
+
+
+    .flex{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      width: 100%;
+
+      div{
+        background-color: $roedLys;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+
+
+  .dropDown{
+   display: none;
+ }
+
+  header{
+  height: 100px;
+  padding: 20px;
+
+  a{
+      color: $hvid;
+      text-decoration: none;
+   }
+
+  }
+
+  .logo{
+    height: 30%;
+    width: 30%;
+    padding-left: 10%;
+
+  }
+
+  .menuBar{
+    display: block;
+    padding-right: 10%;
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    margin-top: 53px;
+
+  }
+
+
   .blog{
     .blogTxt{
       padding-top: 40px;
@@ -292,6 +503,19 @@ header{
     padding: 30px 15% 0 15%;
   }
 
+  footer{
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+.someIkoner_web{
+  display: block;
+  height: auto;
+  width: 10%;
+}
+
+  .someIkoner_mobil{
+    display: none;
+  }
 }
 
 @media print {
