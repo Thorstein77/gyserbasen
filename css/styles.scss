@@ -17,7 +17,7 @@ body {
 h1 {
   font-family: 'Stardos Stencil', cursive;
   font-weight: normal;
-  color: $sort;
+  color: $hvid;
   font-size: 22pt;
   text-align: center;
   padding: 30px 0 0 0;
@@ -201,6 +201,7 @@ button{
     line-height: 21pt;
     margin-bottom: 10px;
   }
+
   ol li{
     font-family: 'Arial', sans-serif;
     font-size: 12pt;
@@ -223,6 +224,7 @@ button{
   background-repeat: no-repeat;
   background-size: auto 100%;
   margin-top: 40px;
+  background-position: center;
 }
 
 .kommentar{
@@ -231,15 +233,15 @@ button{
   background-color: $roed;
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 20px;
-  padding: 10px;
+  margin-bottom: 50px;
+  padding: 0 0 20px 0 ;
   text-decoration: $hvid;
 }
+
 
 form{
   border-bottom-color: $roed;
   margin: 0 auto;
-
 }
 
 button{
@@ -248,6 +250,82 @@ button{
   color: $hvid;
   border: none;
   border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+button:hover{
+  background-color: $roed;
+}
+
+.date1{
+  color: $hvid;
+  font-size: xx-small;
+  padding-left: 20px;
+}
+
+.date2{
+  color: $hvid;
+  font-size: xx-small;
+  padding-left: 20px;
+}
+
+.kommentar1{
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  background-color: $roedLys;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+
+}
+
+.billedeTilkommentar1{
+  color: $hvid;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin: 10px;
+  margin-left: -50px;
+}
+
+.txtTilkomentar1{
+  color: $hvid;
+  font-size: smaller;
+  padding: 10px;
+  text-align: left;
+  width: 90%;
+}
+
+.kommentar2{
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  background-color: $roedLys;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding-top: 10px;
+
+}
+
+.billedeTilkommentar2{
+  color: $hvid;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin: 10px;
+  margin-left: -50px;
+}
+
+.txtTilkomentar2{
+  color: $hvid;
+  font-size: smaller;
+  padding: 10px;
+  text-align: left;
+  width: 90%;
 }
 
 header{
@@ -395,7 +473,8 @@ h1 {
   }
 
   .blog{
-    background-size: 100% auto;
+    background-size: 100% 100%;
+
   }
 
 
@@ -440,6 +519,8 @@ h1 {
   }
 
 
+
+
   .blog{
     .blogTxt{
       padding-top: 40px;
@@ -455,6 +536,11 @@ h1 {
     }
     padding: 30px 15% 0 15%;
   }
+
+.kommentarContent{
+  width: 80%;
+  margin: 0 auto;
+}
 
   footer{
     padding-right: 10%;
