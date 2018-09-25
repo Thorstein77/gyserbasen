@@ -157,7 +157,7 @@
                 </div>
             </section>
 
-                <section>
+                <section class="genreSection">
                     <h1>
                         FILM
                     </h1>
@@ -192,33 +192,15 @@
 
                             <div class="genreSlideMobile2">
                                 <div class="genreSlideObject2">
-                                    <img src="images/kat1.jpg">
-
-                                    <p class="acionHorror" >
-                                    <h3>test</h3>
-                                    <h4>aldersgrænse</h4>
-                                    kat1
-                                    </p>
+                                    <div class="genre2-1"></div>
                                 </div>
 
                                 <div class="genreSlideObject2">
-                                    <img src="images/kat2.jpeg">
-
-                                    <p class="acionHorror" id="genre1-2">
-                                    <h3>test</h3>
-                                    <h4>aldersgrænse</h4>
-                                    kat 2
-                                    </p>
+                                    <div class="genre2-2"></div>
                                 </div>
 
                                 <div class="genreSlideObject2">
-                                    <img src="images/kat3.jpeg">
-
-                                    <p class="acionHorror" id="genre1-3">
-                                    <h3>test</h3>
-                                    <h4>aldersgrænse</h4>
-                                    kat3
-                                    </p>
+                                    <div class="genre2-3"></div>
                                 </div>
                             </div>
                         </div>
@@ -272,7 +254,6 @@
 
 
             <div class="someIkoner_mobil">
-
                 <div class="facebookIkon">
 
                     <a href="https://da-dk.facebook.com/login">
@@ -322,7 +303,7 @@
             slideIndex1++;
             if (slideIndex1 > slides1.length) {slideIndex1 = 1}
             slides1[slideIndex1-1].style.display = "block";
-            setTimeout(showSlides1, 2000); // Change image every 2 seconds
+            setTimeout(showSlides1, 3500); // Change image every 2 seconds
         }
 
         var slideIndex2 = 0;
@@ -337,7 +318,7 @@
             slideIndex2++;
             if (slideIndex2 > slides2.length) {slideIndex2 = 1}
             slides2[slideIndex2-1].style.display = "block";
-            setTimeout(showSlides2, 2000);
+            setTimeout(showSlides2, 3500);
         }
 
         var slideIndexW = 0;
@@ -363,6 +344,7 @@
                 'api_key': '64b4491b45f63114a604290efac3e4e8',
                 'language': 'da_DA'
             },
+
             success: function(result) {
                 console.log(result);
 
@@ -372,12 +354,14 @@
                 $(".genre1-1").append("<br><h3>" + result.title + " " +
                     "<br>(" + result.release_date + ") </h3><br>" + "Rating: "
                     +result.vote_average + "/10" + "<br><br><b>Genres: </b>");
+
                 $.each(result.genres, function (k, v) {
                     if(++k > 3) {
                         return false;
                     }
                     $(".genre1-1").append("<br>" + v.name);
                 })
+
                 $(".genre1-1").append("<br><a href='#'>Læs Mere ...</a>")
             },
             error: function (error) {
@@ -388,7 +372,7 @@
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: "https://api.themoviedb.org/3/movie/2667",
+            url: "https://api.themoviedb.org/3/movie/460019",
             data: {
                 'api_key': '64b4491b45f63114a604290efac3e4e8',
                 'language': 'da_DA'
@@ -534,6 +518,8 @@
                 console.log(error);
             }
         });
+
+
     })
 </script>
 
