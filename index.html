@@ -88,7 +88,7 @@
                             <div class="responsive-video">
                                 <iframe width="720" height="405" src="https://www.youtube.com/embed/pzD9zGcUNrw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
-                        <div class="videoSlideText"><h2>The Nun er nu i biograferne</h2><br><p>Se traileren her!</p></div>
+                        <div class="videoSlideText"><h2>The Nun er nu i biograferne</h2><br><p>Se traileren her! <br> Hvis du kunne tænke dig at læse mere om The Nun kan du gøre det <a href="index.html">her</a></p></div>
 
                     </div>
 
@@ -98,7 +98,7 @@
                             <div class="responsive-video">
                                 <iframe width="720" height="405" src="https://www.youtube.com/embed/xLCn88bfW1o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
-                        <div class="videoSlideText"><h2>Ny Venom trailer</h2><br><p>Der er udgivet en ny Venom trailer! Se den her.</p></div>
+                        <div class="videoSlideText"><h2>Ny Venom trailer</h2><br><p>Der er udgivet en ny Venom trailer! Se den her. <br> Husk også at læse <a href="index.html">vores anmelderes</a> mening om filmen! </p></div>
 
                     </div>
 
@@ -108,7 +108,7 @@
                             <div class="responsive-video">
                                 <iframe width="720" height="405" src="https://www.youtube.com/embed/89OP78l9oF0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
-                        <div class="videoSlideText"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen.</p></div>
+                        <div class="videoSlideText"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen. <br> Huske også at læse hvad vores anmelder havde at <a href="index.html">sige om Annihilation!</a> </p></div>
 
                     </div>
 
@@ -118,9 +118,9 @@
                 </div>
 
                 <div class="beskrivelseGraaBoks">
-                    <div class="videoSlideTextWeb"><h2>The Nun er nu i biograferne</h2><br><p>Se traileren her!</p></div>
-                    <div class="videoSlideTextWeb"><h2>Ny Venom trailer</h2><br><p>Der er udgivet en ny Venom trailer! Se den her.</p></div>
-                    <div class="videoSlideTextWeb"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen.</p></div>
+                    <div class="videoSlideTextWeb"><h2>The Nun er nu i biograferne</h2><br><p>Se traileren her! <br> Hvis du kunne tænke dig at læse mere om The Nun kan du gøre det <a href="index.html">her</a></p></div> <br>
+                    <div class="videoSlideTextWeb"><h2>Ny Venom trailer</h2><br><p>Der er udgivet en ny Venom trailer! Se den her. <br> Husk også at læse <a href="index.html">vores anmelderes</a> mening om filmen! </p></div> <br>
+                    <div class="videoSlideTextWeb"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen. <br> Huske også at læse hvad vores anmelder havde at <a href="index.html">sige om Annihilation!</a> </p></div> <br>
                 </div>
 
             </section>
@@ -547,6 +547,8 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex-1].style.display = "block";
+            $(".videoSlideTextWeb").style.display = "none";
+            $(".videoSlideTextWeb:nth-of-type(" + n + ")").style.display = "block";
         }
 
 </script>
