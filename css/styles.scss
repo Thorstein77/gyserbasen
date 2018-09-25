@@ -58,6 +58,11 @@ img {
   height: auto; // Højden skal tilpasse sig
 }
 
+.genreSection{
+  display: block;
+  width: 100%;
+}
+
 .nyheder {
 
 }
@@ -147,7 +152,6 @@ img {
 }
 
 .backGroundImage{
-  width: 100vw;
   background-image: url("../images/darkBG.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -189,6 +193,7 @@ button{
 }
 
 .blog{
+  display: block;
   h1{
     color: $hvid;
     margin-bottom: 5px;
@@ -411,7 +416,7 @@ footer{
 
 @mixin genreSlideMix(){
   width: 100%;
-  height: 620px;
+  height: 640px;
   background-color: $roed;
 
   h2{
@@ -426,10 +431,19 @@ footer{
 @mixin genreSlideMobileMix (){
   background-color: $roedLys;
   display: block;
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
+  padding: 3% 7%;
+  border-radius: 2.5%;
   color: $hvid;
   overflow: hidden;
+
+  a{
+    text-decoration: none;
+    color: $hvid;
+    float: right;
+
+  }
 }
 
 .genreSlide{
@@ -466,6 +480,10 @@ footer{
 h1 {
   font-size: 38pt;
 }
+
+  .genreSection{
+    display: block;
+  }
 
 .nyheder {
   display: grid;
@@ -513,7 +531,11 @@ h1 {
   }
 
   .blog{
+    display: block;
     background-size: 100% 100%;
+    width: 100%;
+    padding: 0;
+
 
   }
 
@@ -583,10 +605,10 @@ h1 {
   }
 
   .logo{
-    height: 30%;
-    width: 30%;
     padding-left: 10%;
-
+    img{
+      width: 185px;
+    }
   }
 
   .menuBar{
@@ -600,9 +622,6 @@ h1 {
     margin-top: 53px;
 
   }
-
-
-
 
   .blog{
     .blogTxt{
@@ -630,14 +649,8 @@ h1 {
     padding-left: 10%;
   }
 
-  .someIkoner_web{
-    display: block;
-    height: auto;
-    width: 10%;
-  }
-
   .someIkoner_mobil{
-    display: none;
+    font-size: 50px;
   }
 }
 
