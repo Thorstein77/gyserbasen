@@ -51,6 +51,14 @@ p {
   font-family: 'Arial', sans-serif;
 }
 
+a {
+  color: $roedLys;
+}
+
+a:hover {
+  color: #C91F21;
+}
+
 // Sikrer billeder er responsive
 img {
   display: block; // Billeder er et element (laver linjeskift)
@@ -500,11 +508,13 @@ h1 {
   grid-column: 2;
   grid-row: 2;
   width: 94%;
+  height: 26vw;
   background-color: #424242;
   border-radius: 5px;
   margin: 100px 0 0 0;
   padding: 20px 15px 15px 15px;
   justify-self: center;
+  overflow: auto;
 }
 
 
@@ -639,6 +649,7 @@ h1 {
   .someIkoner_mobil{
     display: none;
   }
+
 }
 
 @media print {
