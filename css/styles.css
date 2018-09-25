@@ -8,7 +8,7 @@ body {
 h1 {
   font-family: 'Stardos Stencil', cursive;
   font-weight: normal;
-  color: black;
+  color: white;
   font-size: 22pt;
   text-align: center;
   padding: 30px 0 0 0; }
@@ -41,7 +41,7 @@ img {
   height: auto; }
 
 .videoSlideshowContainer {
-  max-width: 700px;
+  max-width: 992px;
   position: relative; }
 
 .videoSlideshow {
@@ -73,6 +73,9 @@ img {
   padding: 8px 12px;
   bottom: 8px;
   width: 100%; }
+
+.videoSlideTextWeb {
+  display: none; }
 
 .videoSlideNumbertext {
   color: white;
@@ -242,7 +245,6 @@ footer {
   justify-content: space-between; }
   footer p {
     color: white; }
-
   footer .someIkoner_mobil {
     color: white;
     display: flex;
@@ -253,9 +255,6 @@ footer {
       color: white; }
   footer .someIkoner_web {
     display: none; }
-
-  footer .someIkoner {
-    color: white; }
 
 .genreSlide {
   width: 100%;
@@ -295,11 +294,45 @@ footer {
 .genreSlideWeb {
   display: none; }
 
-
 @media screen and (min-width: 768px) {
   .blog button {
     width: 50%; } }
 @media screen and (min-width: 992px) {
+  h1 {
+    font-size: 38pt; }
+
+  .nyheder {
+    display: grid;
+    grid-template-rows: 30px auto;
+    grid-template-columns: 70% 30%; }
+
+  .nyhederOverskrift {
+    grid-column: 2;
+    grid-row: 2; }
+
+  .videoSlideshowContainer {
+    grid-column: 1;
+    grid-row: 2; }
+
+  .videoSlideText {
+    display: none; }
+
+  .videoSlideTextWeb {
+    display: grid;
+    color: white; }
+
+  .naeste, .forrige {
+    top: 50%; }
+
+  .beskrivelseGraaBoks {
+    grid-column: 2;
+    grid-row: 2;
+    width: 94%;
+    background-color: #424242;
+    border-radius: 5px;
+    margin: 100px 0 0 0;
+    padding: 20px 15px 15px 15px;
+    justify-self: center; }
 
   .blog button {
     width: 30%; }
@@ -346,54 +379,6 @@ footer {
     margin-top: 53px; }
 
   .blog {
-
-  h1 {
-    font-size: 38pt; }
-
-  .nyheder {
-    display: grid;
-    grid-template-rows: 30px auto;
-    grid-template-columns: 700px 8px 284px 8px; }
-
-  .nyhederOverskrift {
-    grid-column: 3; }
-
-  .videoSlideshowContainer {
-    grid-column: 1;
-    grid-row: 2; }
-
-  .videoSlideText {
-    display: none; }
-
-  .beskrivelseGraaBoks {
-    grid-column: 3;
-    grid-row: 2;
-    background-color: #424242;
-    border-radius: 5px;
-    margin: 90px 0 0 0; }
-
-  .blog button {
-    width: 30%; }
-
-  .blog {
-    background-size: 100% auto; } }
-@media screen and (min-width: 1200px) {
-  .dropDown {
-    display: none; }
-
-  header {
-    height: 100px;
-    padding: 20px; }
-    header a {
-      color: white;
-      text-decoration: none; }
-
-  .logo {
-    height: 20%;
-    width: 20%; }
-
-  .blog {
->>>>>>> 07327def81438eac5d2ac9419df0b5b4bd182a7f
     padding: 30px 15% 0 15%; }
     .blog .blogTxt {
       padding-top: 40px; }
