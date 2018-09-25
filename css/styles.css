@@ -40,6 +40,10 @@ img {
   max-width: 100%;
   height: auto; }
 
+.genreSection {
+  display: block;
+  width: 100%; }
+
 .videoSlideshowContainer {
   max-width: 992px;
   position: relative; }
@@ -114,7 +118,6 @@ img {
   height: 100%; }
 
 .backGroundImage {
-  width: 100vw;
   background-image: url("../images/darkBG.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed; }
@@ -149,6 +152,7 @@ button {
   background-color: #2d0d10; }
 
 .blog {
+  display: block;
   background-image: url("../images/blogBG.jpg");
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -326,7 +330,7 @@ footer {
 
 .genreSlide {
   width: 100%;
-  height: 620px;
+  height: 640px;
   background-color: #2d0d10; }
   .genreSlide h2 {
     color: white;
@@ -337,14 +341,20 @@ footer {
   .genreSlide .genreSlideMobile {
     background-color: #501011;
     display: block;
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
+    padding: 3% 7%;
+    border-radius: 2.5%;
     color: white;
     overflow: hidden; }
+    .genreSlide .genreSlideMobile a {
+      text-decoration: none;
+      color: white;
+      float: right; }
 
 .genreSlide2 {
   width: 100%;
-  height: 620px;
+  height: 640px;
   background-color: #2d0d10;
   margin: 7% auto 0 auto; }
   .genreSlide2 h2 {
@@ -356,10 +366,16 @@ footer {
   .genreSlide2 .genreSlideMobile2 {
     background-color: #501011;
     display: block;
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
+    padding: 3% 7%;
+    border-radius: 2.5%;
     color: white;
     overflow: hidden; }
+    .genreSlide2 .genreSlideMobile2 a {
+      text-decoration: none;
+      color: white;
+      float: right; }
 
 .genreSlideWeb {
   display: none; }
@@ -375,6 +391,9 @@ footer {
 
   h1 {
     font-size: 38pt; }
+
+  .genreSection {
+    display: block; }
 
   .nyheder {
     display: grid;
@@ -413,7 +432,10 @@ footer {
     width: 30%; }
 
   .blog {
-    background-size: 100% 100%; }
+    display: block;
+    background-size: 100% 100%;
+    width: 100%;
+    padding: 0; }
 
   .genreSlide, .genreSlide2 {
     display: none; }
