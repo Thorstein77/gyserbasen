@@ -245,6 +245,7 @@ button{
   margin-bottom: 50px;
   padding: 0 0 20px 0 ;
   text-decoration: $hvid;
+
 }
 
 
@@ -288,6 +289,7 @@ button:hover{
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
+  border-radius: 5px;
 
 }
 
@@ -298,6 +300,7 @@ button:hover{
   padding: 10px;
   margin: 10px;
   margin-left: -50px;
+
 }
 
 .txtTilkomentar1{
@@ -317,7 +320,7 @@ button:hover{
   justify-content: space-between;
   margin-bottom: 50px;
   padding-top: 10px;
-
+  border-radius: 5px;
 }
 
 .billedeTilkommentar2{
@@ -391,8 +394,10 @@ footer{
   justify-content: space-between;
 
 
+
   p{
     color: $hvid;
+    font-size: xx-small;
   }
 
 
@@ -477,7 +482,17 @@ footer{
 
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
-h1 {
+
+  .logo{
+    padding-left: 10%;
+    img{
+      width: 185px;
+    }
+
+  }
+
+
+  h1 {
   font-size: 38pt;
 }
 
@@ -583,6 +598,9 @@ h1 {
   .genre1-1, .genre1-2, .genre1-3, .genre2-1, .genre2-2, .genre2-3{
     @include movieBox;
   }
+
+
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -604,17 +622,10 @@ h1 {
 
   }
 
-  .logo{
-    padding-left: 10%;
-    img{
-      width: 185px;
-    }
-  }
 
   .menuBar{
-    display: block;
     padding-right: 10%;
-    width: 300px;
+    width: 30%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -622,6 +633,8 @@ h1 {
     margin-top: 53px;
 
   }
+
+
 
   .blog{
     .blogTxt{
@@ -650,7 +663,8 @@ h1 {
   }
 
   .someIkoner_mobil{
-    font-size: 50px;
+    font-size: 30px;
+
   }
 }
 

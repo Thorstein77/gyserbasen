@@ -40,10 +40,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-.genreSection {
-  display: block;
-  width: 100%; }
-
 .videoSlideshowContainer {
   max-width: 992px;
   position: relative; }
@@ -118,6 +114,7 @@ img {
   height: 100%; }
 
 .backGroundImage {
+  width: 100vw;
   background-image: url("../images/darkBG.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed; }
@@ -152,7 +149,6 @@ button {
   background-color: #2d0d10; }
 
 .blog {
-  display: block;
   background-image: url("../images/blogBG.jpg");
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -229,7 +225,8 @@ button:hover {
   background-color: #501011;
   display: flex;
   justify-content: space-between;
-  padding-top: 10px; }
+  padding-top: 10px;
+  border-radius: 5px; }
 
 .billedeTilkommentar1 {
   color: white;
@@ -254,7 +251,8 @@ button:hover {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  border-radius: 5px; }
 
 .billedeTilkommentar2 {
   color: white;
@@ -313,7 +311,8 @@ footer {
   padding: 12px;
   justify-content: space-between; }
   footer p {
-    color: white; }
+    color: white;
+    font-size: xx-small; }
   footer .someIkoner_mobil {
     color: white;
     display: flex;
@@ -327,7 +326,7 @@ footer {
 
 .genreSlide {
   width: 100%;
-  height: 640px;
+  height: 620px;
   background-color: #2d0d10; }
   .genreSlide h2 {
     color: white;
@@ -338,20 +337,14 @@ footer {
   .genreSlide .genreSlideMobile {
     background-color: #501011;
     display: block;
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
-    padding: 3% 7%;
-    border-radius: 2.5%;
     color: white;
     overflow: hidden; }
-    .genreSlide .genreSlideMobile a {
-      text-decoration: none;
-      color: white;
-      float: right; }
 
 .genreSlide2 {
   width: 100%;
-  height: 640px;
+  height: 620px;
   background-color: #2d0d10;
   margin: 7% auto 0 auto; }
   .genreSlide2 h2 {
@@ -363,16 +356,10 @@ footer {
   .genreSlide2 .genreSlideMobile2 {
     background-color: #501011;
     display: block;
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
-    padding: 3% 7%;
-    border-radius: 2.5%;
     color: white;
     overflow: hidden; }
-    .genreSlide2 .genreSlideMobile2 a {
-      text-decoration: none;
-      color: white;
-      float: right; }
 
 .genreSlideWeb {
   display: none; }
@@ -381,11 +368,13 @@ footer {
   .blog button {
     width: 50%; } }
 @media screen and (min-width: 992px) {
+  .logo {
+    padding-left: 10%; }
+    .logo img {
+      width: 185px; }
+
   h1 {
     font-size: 38pt; }
-
-  .genreSection {
-    display: block; }
 
   .nyheder {
     display: grid;
@@ -424,10 +413,7 @@ footer {
     width: 30%; }
 
   .blog {
-    display: block;
-    background-size: 100% 100%;
-    width: 100%;
-    padding: 0; }
+    background-size: 100% 100%; }
 
   .genreSlide, .genreSlide2 {
     display: none; }
@@ -467,15 +453,9 @@ footer {
       color: white;
       text-decoration: none; }
 
-  .logo {
-    padding-left: 10%; }
-    .logo img {
-      width: 185px; }
-
   .menuBar {
-    display: block;
     padding-right: 10%;
-    width: 300px;
+    width: 30%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -503,6 +483,6 @@ footer {
     padding-left: 10%; }
 
   .someIkoner_mobil {
-    font-size: 50px; } }
+    font-size: 30px; } }
 
 /*# sourceMappingURL=styles.css.map */
