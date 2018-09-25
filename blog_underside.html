@@ -39,6 +39,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
 </head>
 
 <!-- i <body> har man alt indhold på siden -->
@@ -127,19 +130,69 @@
             </section>
 
             <section class="kommentar">
-                <h2>
+                <h1>
                     Kommentar
-                </h2>
+                </h1>
 
                 <div class="kommentarContent">
+
+                    <br> <br>
 
                     <form>
                         <input type="text" placeholder="Skriv din menning her">
                     </form>
 
-                    <button>
-                        SLÅ OP
-                    </button>
+                    <div class="knap_underside">
+
+                        <button>
+                            SLÅ OP
+                        </button>
+
+                    </div>
+
+                        <br>  <br>
+                    <div class="kommentar1">
+
+                           <div class="date1">
+                               <p>02/09/2018</p>
+                           </div>
+
+                        <div class="billedeTilkommentar1">
+                            <i class="fas fa-laugh-beam fa-4x"></i>
+                        </div>
+
+                        <div class="txtTilkomentar1">
+
+                                <br>
+                            <h3>flotte_fyr</h3>
+                            <br> <br>
+                            <p>
+                                #1 og #5 er virkelig grineren
+                            </p>
+                        </div>
+
+                    </div>
+                    <br> <br> <br>
+                    <div class="kommentar2">
+
+                        <div class="date2">
+                            <p>27/06/2018</p>
+                        </div>
+
+
+                        <div class="billedeTilkommentar2">
+                            <i class="fas fa-laugh-beam fa-4x"></i>
+                        </div>
+
+                        <div class="txtTilkomentar2">
+                            <br>
+                             <h3>HotteConnie! </h3> <br> <br>
+                            <p>
+                                LOL !!!!!!!!
+                            </p>
+                        </div>
+
+                    </div>
 
                 </div>
             </section>
@@ -191,21 +244,21 @@
 
                 <div class="facebookIkon">
 
-                    <a href="https://da-dk.facebook.com/login"><i class="fab fa-facebook-square"></i>
+                    <a href="https://da-dk.facebook.com/login"><i class="fab fa-facebook-square fa-3x"></i>
                     </a>
                 </div>
 
 
                 <div class="twitterIkon">
 
-                    <a href="https://twitter.com/login?lang=da"><i class="fab fa-twitter-square"></i>
+                    <a href="https://twitter.com/login?lang=da"><i class="fab fa-twitter-square fa-3x"></i>
                     </a>
                 </div>
 
 
                 <div class="googleIkon">
 
-                    <a href="https://plus.google.com/discover"><i class="fab fa-google-plus-square"></i>
+                    <a href="https://plus.google.com/discover"><i class="fab fa-google-plus-square fa-3x"></i>
                     </a>
                 </div>
             </div>
@@ -252,6 +305,14 @@
         slides[slideIndex-1].style.display = "block";
     }
 
+
+
+</script>
+
+<script>
+    $(".knap_underside").click(function () {
+        alert("Tak for din kommentar, din menning er vigtig for os")
+    })
 </script>
 
 
