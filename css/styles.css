@@ -225,7 +225,8 @@ button:hover {
   background-color: #501011;
   display: flex;
   justify-content: space-between;
-  padding-top: 10px; }
+  padding-top: 10px;
+  border-radius: 5px; }
 
 .billedeTilkommentar1 {
   color: white;
@@ -250,7 +251,8 @@ button:hover {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  border-radius: 5px; }
 
 .billedeTilkommentar2 {
   color: white;
@@ -309,7 +311,8 @@ footer {
   padding: 12px;
   justify-content: space-between; }
   footer p {
-    color: white; }
+    color: white;
+    font-size: xx-small; }
   footer .someIkoner_mobil {
     color: white;
     display: flex;
@@ -365,6 +368,11 @@ footer {
   .blog button {
     width: 50%; } }
 @media screen and (min-width: 992px) {
+  .logo {
+    padding-left: 10%; }
+    .logo img {
+      width: 185px; }
+
   h1 {
     font-size: 38pt; }
 
@@ -445,15 +453,9 @@ footer {
       color: white;
       text-decoration: none; }
 
-  .logo {
-    height: 30%;
-    width: 30%;
-    padding-left: 10%; }
-
   .menuBar {
-    display: block;
     padding-right: 10%;
-    width: 300px;
+    width: 30%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -480,12 +482,7 @@ footer {
     padding-right: 10%;
     padding-left: 10%; }
 
-  .someIkoner_web {
-    display: block;
-    height: auto;
-    width: 10%; }
-
   .someIkoner_mobil {
-    display: none; } }
+    font-size: 30px; } }
 
 /*# sourceMappingURL=styles.css.map */
