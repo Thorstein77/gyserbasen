@@ -245,7 +245,7 @@
                 <p>
                     © 2018 Gyser Basen
                     <br><br>
-                    Tak til moviedb.org
+                    Tak til themoviedb.org
                 </p>
 
 
@@ -541,15 +541,17 @@
         function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("videoSlideshow");
+            var text = document.getElementsByClassName("videoSlideTextWeb")
             if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
+            for (i = 0; i < text.length; i++) {
+                text[i].style.display = "none";
+            }
             slides[slideIndex-1].style.display = "block";
-
-            $(".videoSlideTextWeb").style.display = "none";
-            $(".videoSlideTextWeb:nth-of-type(" + n + ")").style.display = "block";
+            text[slideIndex-1].style.display = "block";
         }
 
 </script>
