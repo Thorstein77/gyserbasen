@@ -8,6 +8,7 @@
 $roed: #2d0d10;
 $roedLys: #501011;
 $hvid: white;
+$hvidGennemsigtig: rgba(255, 255, 255, 0.4);
 $sort: black;
 
 body {
@@ -18,7 +19,7 @@ h1 {
   font-family: 'Stardos Stencil', cursive;
   font-weight: normal;
   color: $hvid;
-  font-size: 22pt;
+  font-size: 32pt;
   text-align: center;
   padding: 30px 0 0 0;
 }
@@ -480,6 +481,68 @@ footer{
   display: none;
 }
 
+.sektionerMovies h2 {
+  padding-left: 35px;
+}
+
+.sektionerMovies {
+padding: 20px 0;
+}
+
+.sektionStyling {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  i{
+    margin: auto 0;
+    padding: 0 5px;
+    color: white;
+    font-size: 20pt;
+  }
+}
+
+.billedeStyling {
+  padding: 10px 5px;
+}
+
+.billedeStylingWeb {
+  display: none;
+}
+
+.sektionBaggrundsfarver1 {
+ background-color: $hvidGennemsigtig;
+}
+
+.sektionBaggrundsfarver2 {
+  background-color: $roedLys;
+}
+
+.movie {
+  padding: 10px 20px;
+  color: white;
+  height: auto;
+}
+
+.movieposter {
+  display: block;
+  padding-bottom: 20px;
+}
+
+.movieInfo {
+  background-color: $roedLys;
+  margin-top: 20px;
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    list-style-type: none;
+    li {
+      padding: 5px;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
   .blog button{
@@ -609,7 +672,61 @@ footer{
     @include movieBox;
   }
 
+.billedeStylingWeb {
+  display: block;
+}
 
+.movie {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movieposterTekst {
+  width: 75%;
+}
+
+.movieposter {
+  float: left;
+  width: 40%;
+  padding: 0 30px 30px 0;
+}
+
+.movieTekst {
+}
+
+.movieInfo {
+  margin-top: 0;
+  width: 20%;
+  height: 300px;
+  overflow: hidden;
+  ul {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+  }
+}
+
+#aarstal {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+
+#tid {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+}
+
+#rating{
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+
+#genre {
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 1;
+}
 
 }
 
