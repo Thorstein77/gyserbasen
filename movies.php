@@ -46,12 +46,21 @@
 <?php
 
 require ("db/db.php");
-require ("php/header.php");
+
+    $dbMovie = mysqli_query($db, "SELECT * FROM movies WHERE 
+          mId = '1'");
+
+    $data = mysqli_fetch_assoc($dbMovie);
 
 ?>
 
 
 <div class="backGroundImage">
+    <div style="width: 90%; margin: 0 auto; background-color: rgba(255, 255, 255, 0.4);">
+
+    <?php
+    require ("php/header.php");
+    ?>
 
     <h1>FILM</h1>
 
@@ -66,7 +75,9 @@ require ("php/header.php");
             <i class="fas fa-chevron-left"></i>
 
             <div class="billedeStyling">
-                <img src="images/halloween.jpg">
+                <img src="<?php echo $data["mImg"] ?>">
+                <br>
+                <h2><?php echo $data["mTitle"]."(".$data["mYear"].")"; ?></h2>
             </div>
 
             <div class="billedeStyling">
@@ -173,14 +184,17 @@ require ("php/header.php");
 
     </section>
 
+        <?php
+
+        require ("php/footer.php");
+
+        ?>
+
+    </div>
 
 </div>
 
-<?php
 
-require ("php/footer.php");
-
-?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
