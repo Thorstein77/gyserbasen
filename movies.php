@@ -37,6 +37,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
 
+    <!-- SLICK slider -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
 
 </head>
 
@@ -47,10 +51,7 @@
 
 require ("db/db.php");
 
-    $dbMovie = mysqli_query($db, "SELECT * FROM movies WHERE 
-          mId = '1'");
 
-    $data = mysqli_fetch_assoc($dbMovie);
 
 ?>
 
@@ -66,42 +67,33 @@ require ("db/db.php");
 
 
 
-    <section class="gyser sektionerMovies sektionBaggrundsfarver1">
+    <section class="gyser sektionerMovies">
 
         <h2>Gyser</h2>
 
         <div class="sektionStyling">
 
-            <i class="fas fa-chevron-left"></i>
+        <?php
+        $dbMovie = mysqli_query($db, "SELECT * FROM movies");
 
+
+
+        while ($data = mysqli_fetch_assoc($dbMovie)) {
+            $var = $data ["mId"];
+            ?>
             <div class="billedeStyling">
-                <img src="<?php echo $data["mImg"] ?>">
-                <br>
-                <h2><?php echo $data["mTitle"]."(".$data["mYear"].")"; ?></h2>
+                <a href="movie.php?variable=<?php echo $var ?>">
+                    <img src="<?php echo $data["mImg"] ?>">
+                    <br>
+                    <h3>
+                        <?php echo $data["mTitle"] ?>
+                    </h3>
+                </a>
             </div>
 
-            <div class="billedeStyling">
-                <img src="images/bohianrhapsody.jpg">
-            </div>
-
-            <div class="billedeStyling billedeStylingWeb">
-                <img src="images/halloween.jpg">
-            </div>
-
-            <div class="billedeStyling billedeStylingWeb">
-                <img src="images/venom.jpg">
-            </div>
-
-            <div class="billedeStyling billedeStylingWeb">
-                <img src="images/halloween.jpg">
-            </div>
-
-            <div class="billedeStyling billedeStylingWeb">
-                <img src="images/bohianrhapsody.jpg">
-            </div>
-
-
-            <i class="fas fa-chevron-right"></i>
+            <?php
+        }
+        ?>
 
         </div>
 
@@ -113,7 +105,6 @@ require ("db/db.php");
 
         <div class="sektionStyling">
 
-            <i class="fas fa-chevron-left"></i>
 
             <div class="billedeStyling">
                 <img src="images/halloween.jpg">
@@ -123,35 +114,39 @@ require ("db/db.php");
                 <img src="images/bohianrhapsody.jpg">
             </div>
 
-            <div class="billedeStyling billedeStylingWeb">
+            <div class="billedeStyling">
                 <img src="images/halloween.jpg">
             </div>
 
-            <div class="billedeStyling billedeStylingWeb">
+            <div class="billedeStyling">
                 <img src="images/venom.jpg">
             </div>
 
-            <div class="billedeStyling billedeStylingWeb">
+            <div class="billedeStyling">
                 <img src="images/halloween.jpg">
             </div>
 
-            <div class="billedeStyling billedeStylingWeb">
+            <div class="billedeStyling">
                 <img src="images/bohianrhapsody.jpg">
             </div>
 
+            <div class="billedeStyling">
+                <img src="images/halloween.jpg">
+            </div>
 
-            <i class="fas fa-chevron-right"></i>
+            <div class="billedeStyling">
+                <img src="images/bohianrhapsody.jpg">
+            </div>
 
         </div>
 
     </section>
-    <section class="gyser sektionerMovies sektionBaggrundsfarver1">
+    <section class="gyser sektionerMovies">
 
         <h2>Gyser</h2>
 
         <div class="sektionStyling">
 
-            <i class="fas fa-chevron-left"></i>
 
             <div class="billedeStyling">
                 <img src="images/halloween.jpg">
@@ -161,24 +156,22 @@ require ("db/db.php");
                 <img src="images/bohianrhapsody.jpg">
             </div>
 
-            <div class="billedeStyling billedeStylingWeb">
+            <div class="billedeStyling">
                 <img src="images/halloween.jpg">
             </div>
 
-            <div class="billedeStyling billedeStylingWeb">
+            <div class="billedeStyling">
                 <img src="images/venom.jpg">
             </div>
 
-            <div class="billedeStyling billedeStylingWeb">
+            <div class="billedeStyling">
                 <img src="images/halloween.jpg">
             </div>
 
-            <div class="billedeStyling billedeStylingWeb">
+            <div class="billedeStyling">
                 <img src="images/bohianrhapsody.jpg">
             </div>
 
-
-            <i class="fas fa-chevron-right"></i>
 
         </div>
 
@@ -197,11 +190,17 @@ require ("db/db.php");
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
 <script>
     $(document).ready(function (e) {
         // Din kode her
     });
 </script>
+
 
 <script>
 
@@ -234,7 +233,32 @@ require ("db/db.php");
         text[slideIndex-1].style.display = "block";
     }
 
+
+
+
+
 </script>
 
+<script>
+    $(document).ready(function(){
+        $('.sektionStyling').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            arrows: true,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 6,
+                        arrows: true
+                    }
+                }
+            ]
+        });
+    });
+</script>
 </body>
 </html>
