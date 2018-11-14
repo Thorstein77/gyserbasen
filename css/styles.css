@@ -395,7 +395,9 @@ footer {
 .sektionStyling {
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row; }
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto; }
   .sektionStyling i {
     margin: auto 0;
     padding: 0 5px;
@@ -404,9 +406,9 @@ footer {
 
 .billedeStyling {
   padding: 10px 5px; }
-
-.billedeStylingWeb {
-  display: none; }
+  .billedeStyling a {
+    text-decoration: none;
+    color: white; }
 
 .sektionBaggrundsfarver2 {
   background-color: #501011; }
@@ -518,9 +520,6 @@ footer {
       color: white;
       float: right; }
 
-  .billedeStylingWeb {
-    display: block; }
-
   .movie {
     width: 70%;
     margin: 0 auto;
@@ -559,7 +558,11 @@ footer {
 
   #genre {
     grid-row: 4 / span 1;
-    grid-column: 1 / span 1; } }
+    grid-column: 1 / span 1; }
+
+  .sektionStyling button {
+    width: 40px;
+    height: 37px; } }
 @media screen and (min-width: 1200px) {
   .dropDown {
     display: none; }

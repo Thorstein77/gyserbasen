@@ -493,7 +493,8 @@ padding: 20px 0;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-
+  width: 80%;
+  margin: 0 auto;
   i{
     margin: auto 0;
     padding: 0 5px;
@@ -504,14 +505,11 @@ padding: 20px 0;
 
 .billedeStyling {
   padding: 10px 5px;
-}
 
-.billedeStylingWeb {
-  display: none;
-}
-
-.sektionBaggrundsfarver1 {
- background-color: $hvidGennemsigtig;
+  a{
+    text-decoration: none;
+    color: $hvid;
+  }
 }
 
 .sektionBaggrundsfarver2 {
@@ -672,9 +670,6 @@ padding: 20px 0;
     @include movieBox;
   }
 
-.billedeStylingWeb {
-  display: block;
-}
 
 .movie {
   width: 70%;
@@ -726,6 +721,13 @@ padding: 20px 0;
 #genre {
   grid-row: 4 / span 1;
   grid-column: 1 / span 1;
+}
+
+.sektionStyling {
+  button{
+    width: 40px;
+    height: 37px;
+  }
 }
 
 }
