@@ -47,7 +47,7 @@
     require ("php/header.php");
     require ("db/db.php");
 
-    $var = $_GET["variable"];
+    $var = mysqli_real_escape_string($db, $_GET["variable"]);
     $dbMovie = mysqli_query($db, "SELECT * FROM movies WHERE 
       mId = '$var'");
 
@@ -122,10 +122,36 @@
             success: function (result) {
                 console.log(result);
 
-                $(".movieTekst").html("<p>" + result.overview + "</p>")
-                $("#tid").html("<p><b>Spilletid</b><br>" + result.runtime + " minutter</p>")
-                $("#rating").html("<p><b>Rating</b><br>" + result.vote_average + " / 10</p>")
+                if(result.overview === ''){
+                    $.ajax({
+                        type: "GET",
+                        dataType: "json",
+                        url: "https://api.themoviedb.org/3/<?php
+                            echo $data["mApi"];
+                            ?>",
+                        data: {
+                            'api_key': '64b4491b45f63114a604290efac3e4e8',
+                            'language': 'en-EN'
+                        },
 
+                        success: function (result) {
+                            console.log(result);
+
+                            $(".movieTekst").html("<p>" + result.overview + "</p>")
+                            $("#tid").html("<p><b>Spilletid</b><br>" + result.runtime + " minutter</p>")
+                            $("#rating").html("<p><b>Rating</b><br>" + result.vote_average + " / 10</p>")
+
+                        },
+
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    })
+                }else{
+                    $(".movieTekst").html("<p>" + result.overview + "</p>")
+                    $("#tid").html("<p><b>Spilletid</b><br>" + result.runtime + " minutter</p>")
+                    $("#rating").html("<p><b>Rating</b><br>" + result.vote_average + " / 10</p>")
+                }
             },
 
             error: function (error) {
@@ -136,3 +162,5 @@
 </script>
 </body>
 </html>
+
+
