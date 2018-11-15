@@ -3,6 +3,8 @@
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
 <html lang="da">
 
+<head>
+
 <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
 <meta charset="utf-8">
 
@@ -56,9 +58,55 @@ require ("db/db.php");
 
         <?php
         include ("php/header.php");
+        require ("db/db.php");
+        require ("php/movieReq.php");
         ?>
 
         <?php
+
+
+            if (isset($_POST["update"]) && !empty($_POST["update"])) {
+                $id = mysqli_real_escape_string($db, $_GET["variable"]);
+                $value = mysqli_real_escape_string($db, $_POST["update"]);
+                $info = mysqli_real_escape_string($db, $_POST["info"]);
+                if ($info == "mImg") {
+                    if (isset($_POST["image"]) && !empty($_POST["image"])) {
+                        $image = $_FILES['image']['name'];
+                        $target = "images/";
+                        $target = $target .basename($_FILES['image']['update']);
+                        mysqli_query($db, "UPDATE movies SET mImg = 'images/$image' WHERE mId = '$id'");
+                    }
+                }else {
+                    $dbMovie = mysqli_query($db, "UPDATE movies SET 
+                    $info = '$value' WHERE mId = '$id'");
+
+                    echo $info . " er opdateret til " . $value;
+                }
+            }else {
+
+        ?>
+
+        <form action="adminMoviesUpdate.php?variable=<?php echo $var; ?>"
+              method="post" enctype="multipart/form-data">
+            <label for="info">Vælg:</label>
+            <select name="info" id="info">
+                <option value="mTitle">Title</option>
+                <option value="mGenre">Genre</option>
+                <option value="mYear">Årstal</option>
+                <option value="mImg">Billede</option>
+                <option value="mApi">API</option>
+            </select>
+            <label for="update">opdater:</label>
+            <input type="text" name="update" id="update" placeholder="udfyld">
+            <div>
+                <input type="file" name="image">
+            </div>
+            <button type="submit">Indsend</button>
+        </form>
+
+
+        <?php
+            }
         include ("php/footer.php");
         ?>
 

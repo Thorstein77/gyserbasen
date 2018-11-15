@@ -3,6 +3,8 @@
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
 <html lang="da">
 
+<head>
+
 <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
 <meta charset="utf-8">
 
@@ -57,6 +59,67 @@ require ("db/db.php");
         <?php
         include ("php/header.php");
         ?>
+
+
+        <?php
+
+        if (isset($_POST["mTitle"]) && !empty($_POST["mTitle"])
+        && isset($_POST["mGenre"]) && !empty($_POST["mGenre"])
+        && isset($_POST["mYear"]) && !empty($_POST["mYear"])
+        && isset($_POST["mImg"]) && !empty($_POST["mImg"])
+        && isset($_POST["mApi"]) && !empty($_POST["mApi"])
+        && !empty($_FILES["mImg2"])) {
+            $title = mysqli_real_escape_string($db, $_POST["mTitle"]);
+            $genre = mysqli_real_escape_string($db, $_POST["mGenre"]);
+            $year = mysqli_real_escape_string($db, $_POST["mYear"]);
+            $img = mysqli_real_escape_string($db, $_POST["mImg"]);
+            $img2 = ($_FILES['mImg2']['name']);
+            $api = mysqli_real_escape_string($db, $_POST["mApi"]);
+            $target = "images/";
+            $target = $target .basename($_FILES['mImg2']['name']);
+
+            mysqli_query($db, "INSERT INTO movies VALUES ('$title', '$genre', '$year', 'images/$img2', '$api')");
+
+            if(move_uploaded_file($_FILES['mImg2']['tmp_name'],$target)){
+                echo "Filen ".basename( $_FILES['uploadedfile']['mImg'])." og dine informationer er blevet uploadet.";
+            }else{
+                echo "Lortet er stadig i stykker";
+            }
+        }
+
+        ?>
+
+        <form method="POST" action="adminMoviesCreate.php" enctype="multipart/form-data">
+            <label for="mTitle">Title</label>
+            <input type="text" name="mTitle" id="mTitle">
+
+            <br><br>
+
+            <label for="mGenre">Genre</label>
+            <input type="text" name="mGenre" id="mGenre">
+
+            <br><br>
+
+            <label for="mYear">År</label>
+            <input type="text" name="mYear" id="mYear">
+
+            <br><br>
+
+            <label for="mImg">Billedenavn</label>
+            <input type="text" name="mImg" id="mImg">
+
+            <br>
+
+            <label for="mImg2">Vælg billede</label>
+            <input type="file" name="mImg2" id="mImg2">
+
+            <br><br>
+
+            <label for="mApi">API</label>
+            <input type="text" name="mApi" id="mApi">
+
+            <button type="submit">Opret</button>
+        </form>
 
         <?php
         include ("php/footer.php");
