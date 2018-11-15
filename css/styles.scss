@@ -396,11 +396,14 @@ header{
 footer{
   background-color: $roedLys;
   height: auto;
-  width: 100%;
   flex-direction: row;
   display: flex;
   padding: 12px;
   justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 4.95vw;
+  right: 4.95vw;
 
 
 
