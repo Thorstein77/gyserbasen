@@ -315,11 +315,14 @@ header {
 footer {
   background-color: #501011;
   height: auto;
-  width: 100%;
   flex-direction: row;
   display: flex;
   padding: 12px;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 4.95vw;
+  right: 4.95vw; }
   footer p {
     color: white;
     font-size: xx-small; }

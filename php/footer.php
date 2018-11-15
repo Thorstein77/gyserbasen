@@ -1,3 +1,5 @@
+<div style="width: 100%; height: 54px"></div>
+
 <footer>
 
     <div class="footerText">
