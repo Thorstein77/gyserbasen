@@ -64,49 +64,68 @@ require ("db/db.php");
 
         <?php
 
+            $id = mysqli_real_escape_string($db, $_GET["variable"]);
+            if (isset($_POST["mTitle"]) && !empty($_POST["mTitle"]) ){
+                $title = mysqli_real_escape_string($db, $_POST["mTitle"]);
+                mysqli_query($db, "UPDATE movies SET mTitle = '$title' WHERE mId = '$id'");
+            }
 
-            if (isset($_POST["update"]) && !empty($_POST["update"])) {
-                $id = mysqli_real_escape_string($db, $_GET["variable"]);
-                $value = mysqli_real_escape_string($db, $_POST["update"]);
-                $info = mysqli_real_escape_string($db, $_POST["info"]);
-                if ($info == "mImg") {
-                    if (isset($_POST["image"]) && !empty($_POST["image"])) {
-                        $image = $_FILES['image']['name'];
-                        $target = "images/";
-                        $target = $target .basename($_FILES['image']['update']);
-                        mysqli_query($db, "UPDATE movies SET mImg = 'images/$image' WHERE mId = '$id'");
-                    }
-                }else {
-                    $dbMovie = mysqli_query($db, "UPDATE movies SET 
-                    $info = '$value' WHERE mId = '$id'");
-
-                    echo $info . " er opdateret til " . $value;
+            if (isset($_POST["mGenre"]) && !empty($_POST["mGenre"]) ){
+                $genre = mysqli_real_escape_string($db, $_POST["mGenre"]);
+                mysqli_query($db, "UPDATE movies SET mGenre = '$genre' WHERE mId = '$id'");
+            }
+            if (isset($_POST["mYear"]) && !empty($_POST["mYear"]) ){
+                $year = mysqli_real_escape_string($db, $_POST["mYear"]);
+                mysqli_query($db, "UPDATE movies SET mYear = '$year' WHERE mId = '$id'");
+            }
+            if (!empty($_FILES["mImg"]) ){
+                $img = ($_FILES['mImg']['name']);
+                $target = "images/";
+                $target = $target .basename($_FILES['mImg']['name']);
+                mysqli_query($db, "UPDATE movies SET mImg = 'images/$img' WHERE mId = '$id'");
+                if(move_uploaded_file($_FILES['mImg']['tmp_name'],$target)){
+                    echo "Billedet er blevet opdateret.";
+                }else{
+                    echo "Der er sket en fejl.";
                 }
-            }else {
+            }
+            if (isset($_POST["mApi"]) && !empty($_POST["mApi"]) ){
+                $api = mysqli_real_escape_string($db, $_POST["mApi"]);
+                mysqli_query($db, "UPDATE movies SET mApi = '$api' WHERE mId = '$id'");
+            }
 
         ?>
 
-        <form action="adminMoviesUpdate.php?variable=<?php echo $var; ?>"
-              method="post" enctype="multipart/form-data">
-            <label for="info">Vælg:</label>
-            <select name="info" id="info">
-                <option value="mTitle">Title</option>
-                <option value="mGenre">Genre</option>
-                <option value="mYear">Årstal</option>
-                <option value="mImg">Billede</option>
-                <option value="mApi">API</option>
-            </select>
-            <label for="update">opdater:</label>
-            <input type="text" name="update" id="update" placeholder="udfyld">
-            <div>
-                <input type="file" name="image">
-            </div>
-            <button type="submit">Indsend</button>
-        </form>
+                <form method="POST" action="adminMoviesUpdate.php?variable=<?php echo $var; ?>" enctype="multipart/form-data">
+                    <label for="mTitle">Title</label>
+                    <input type="text" name="mTitle" id="mTitle">
+
+                    <br><br>
+
+                    <label for="mGenre">Genre</label>
+                    <input type="text" name="mGenre" id="mGenre">
+
+                    <br><br>
+
+                    <label for="mYear">År</label>
+                    <input type="text" name="mYear" id="mYear">
+
+                    <br><br>
+
+                    <label for="mImg">Vælg billede</label>
+                    <input type="file" name="mImg" id="mImg" value="">
+
+                    <br><br>
+
+                    <label for="mApi">API</label>
+                    <input type="text" name="mApi" id="mApi">
+
+                    <button type="submit">Opdater</button>
+                </form>
 
 
         <?php
-            }
+
         include ("php/footer.php");
         ?>
 
