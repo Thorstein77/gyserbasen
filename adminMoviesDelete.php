@@ -3,6 +3,7 @@
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
 <html lang="da">
 
+<head>
 <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
 <meta charset="utf-8">
 
@@ -56,9 +57,25 @@ require ("db/db.php");
 
         <?php
         include ("php/header.php");
-        ?>
 
-        <?php
+        $del = mysqli_real_escape_string($db, $_GET["variable"]);
+        if(isset($_POST['confirmDel']) && $_POST['confirmDel'] == 'Yes'){
+            mysqli_query($db, "DELETE FROM movies WHERE mId = '$del'");
+
+            echo "<span style='color: white'>Filmen med ID: ".$del." er blevet slettet</span>";
+        }else {
+            require ("php/movieReq.php");
+            ?>
+
+            <form action="adminMoviesDelete.php?variable=<?php echo $var; ?>"
+                  method="post" enctype="multipart/form-data" class="dltForm">
+                <label for="confirmDel">Slet billedet der hører til denne film?</label>
+                <input type="checkbox" name="confirmDel" id="confirmDel" value="Yes"><br>
+                <button type="submit">Slet denne film</button>
+            </form>
+
+            <?php
+        }
         include ("php/footer.php");
         ?>
 
