@@ -1,0 +1,3 @@
+name:           admin
+email:          admin@kthor.dk
+pw:             MMDb7e1

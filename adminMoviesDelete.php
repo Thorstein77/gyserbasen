@@ -1,3 +1,7 @@
+<?php
+require ("php/inclLoginCheck.php");
+?>
+
 <!doctype html>
 <!-- Fortæller det er html5 -->
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
@@ -63,6 +67,7 @@ require ("db/db.php");
             mysqli_query($db, "DELETE FROM movies WHERE mId = '$del'");
 
             echo "<span style='color: white'>Filmen med ID: ".$del." er blevet slettet</span>";
+            echo "<br><br><a href='adminMovies.php' style='color: white'>Tilbage til admin side</a>";
         }else {
             require ("php/movieReq.php");
             ?>

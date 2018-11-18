@@ -1,3 +1,7 @@
+<?php
+require ("php/inclLoginCheck.php");
+?>
+
 <!doctype html>
 <!-- Fortæller det er html5 -->
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
