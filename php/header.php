@@ -1,13 +1,13 @@
 <header>
     <div class="logo">
-        <a href="index.html">
+        <a href="index.php">
             <img src="images/Logo_hvid.png">
         </a>
 
     </div>
 
     <div class="menuBar">
-        <a href="index.html">
+        <a href="index.php">
             FORSIDE
         </a>
         <a href="blog_underside.html">
@@ -20,7 +20,7 @@
         <button class="drop"><img src="images/menu.png"></button>
 
         <div class="dropDowncontent">
-            <a href="index.html">
+            <a href="index.php">
                 <p>FORSIDE </p>
             </a>
 
