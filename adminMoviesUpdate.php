@@ -1,3 +1,7 @@
+<?php
+require ("php/inclLoginCheck.php");
+?>
+
 <!doctype html>
 <!-- Fortæller det er html5 -->
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
@@ -122,6 +126,12 @@ require ("db/db.php");
 
                     <button type="submit">Opdater</button>
                 </form>
+
+        <br>
+
+        <a href="adminMovies.php" style="color: white">Tilbage til admin side</a>
+
+        <br><br><br>
 
 
         <?php
