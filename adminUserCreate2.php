@@ -40,13 +40,14 @@ if (isset($_POST["createUser"])){
                         header("Location: adminUserCreate.php?signup=success");
                         exit();
                     }
-
-
                 }
             }
         }
     }
 
+}else{
+    header("Location: adminUserCreate.php?signup=createnewuser");
+    exit();
 }
 
 ?>
