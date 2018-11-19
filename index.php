@@ -201,7 +201,7 @@
                     </ol>
 
                     <div class="flex">
-                        <button><a href="blog_underside.html">
+                        <button><a href="blog_underside.php">
                                 LÆS HELE INDLÆGGET
                             </a></button>
                     </div>
@@ -292,7 +292,7 @@
                     $(".genre1-1").append("<br>" + v.name);
                 })
 
-                $(".genre1-1").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre1-1").append("<br><a href='movie.php?variable=2' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -322,7 +322,7 @@
                     }
                     $(".genre1-2").append("<br>" + v.name);
                 })
-                $(".genre1-2").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre1-2").append("<br><a href='movie.php?variable=12' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -352,7 +352,7 @@
                     }
                     $(".genre1-3").append("<br>" + v.name);
                 })
-                $(".genre1-3").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre1-3").append("<br><a href='movie.php?variable=13' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -382,7 +382,7 @@
                     }
                     $(".genre2-1").append("<br>" + v.name);
                 })
-                $(".genre2-1").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre2-1").append("<br><a href='movie.php?variable=1' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -412,7 +412,7 @@
                     }
                     $(".genre2-2").append("<br>" + v.name);
                 })
-                $(".genre2-2").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre2-2").append("<br><a href='movie.php?variable=9' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -442,7 +442,7 @@
                     }
                     $(".genre2-3").append("<br>" + v.name);
                 })
-                $(".genre2-3").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre2-3").append("<br><a href='movie.php?variable=10' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);

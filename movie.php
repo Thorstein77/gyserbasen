@@ -43,9 +43,16 @@
 <body>
 
 <?php
-
-    require ("php/header.php");
     require ("db/db.php");
+?>
+
+<div style="width: 90%; margin: 0 auto">
+<?php
+    require ("php/header.php");
+?>
+</div>
+
+<?php
     require ("php/movieReq.php");
     require ("php/footer.php")
 ?>
