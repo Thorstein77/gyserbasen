@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2018 at 11:57 AM
+-- Generation Time: Nov 19, 2018 at 07:23 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -64,7 +64,8 @@ INSERT INTO `genre` (`gId`, `gName`) VALUES
 (3, 'Action'),
 (4, 'Mysterium'),
 (5, 'Sci-fi'),
-(6, 'Drama');
+(6, 'Drama'),
+(7, 'Komedie');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,11 @@ INSERT INTO `movies` (`mId`, `mTitle`, `mGenre`, `mYear`, `mImg`, `mApi`) VALUES
 (5, 'The Predator', 'Gyser <br>Sci-fi <br>Action <br>Thriller', 2018, 'images/predator.jpg', 'movie/346910'),
 (6, 'A Quiet Place', 'Drama <br>Gyser <br>Thriller <br>Sci-fi', 2018, 'images/aquiteplace.jpg', 'movie/447332'),
 (7, 'The Purge: Election Year', 'Action <br>Gyser <br>Thriller', 2016, 'images/thepurge3.jpg', 'movie/316727'),
-(8, 'Maskernes Nat', 'Gyser <br>Thriller', 1978, 'images/maskernesnat.jpg', 'movie/948');
+(8, 'Maskernes Nat', 'Gyser <br>Thriller', 1978, 'images/maskernesnat.jpg', 'movie/948'),
+(9, 'Day of the Dead: Bloodline', 'Gyser <br>Action', 2018, 'images/dayOfTheDeadBloodline.jpg', 'movie/485415'),
+(10, 'Office Uprising', 'Action <br>Gyser <br>Komedie', 2018, 'images/officeUprising.jpg', 'movie/381237'),
+(12, 'Truth or Dare', 'Thriller <br>Gyser', 2018, 'images/truthOrDare.jpg', 'movie/460019'),
+(13, 'It', 'Thriller <br>Gyser', 2018, 'images/it.jpg', 'movie/346364');
 
 --
 -- Indexes for dumped tables
@@ -131,7 +136,7 @@ ALTER TABLE `adminlogin`
 -- AUTO_INCREMENT for table `genre`
 --
 ALTER TABLE `genre`
-  MODIFY `gId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `gId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `movies`
