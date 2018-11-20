@@ -528,7 +528,28 @@ padding: 20px 0;
 
 .movieposter {
   display: block;
+  position: relative;
   padding-bottom: 20px;
+
+  img{
+    z-index: -2;
+  }
+
+  .playBtn{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    i{
+      margin-top: 60%;
+      font-size: 100px;
+      color: $hvid;
+    }
+  }
 }
 
 .movieInfo {
@@ -603,6 +624,20 @@ padding: 20px 0;
   width: 52%;
   margin: 0 auto;
   color: white;
+}
+
+.movieStream{
+  background-color: black;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  z-index: 10;
+
+  h1{
+    margin-top: 60%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -750,7 +785,23 @@ padding: 20px 0;
   float: left;
   width: 40%;
   padding: 0 30px 30px 0;
+
+  .playBtn{
+    top: 0;
+    bottom: 30px;
+    left: 0;
+    right: 30px;
+
+    i{
+      margin-top: 55%;
+      font-size: 80px;
+    }
+  }
 }
+
+  .movieposter a :hover{
+    color: $roedLys;
+  }
 
 .movieTekst {
 }
@@ -829,6 +880,14 @@ padding: 20px 0;
       font-size: 30px;
     }
   }
+
+  .movieStream{
+    h1{
+      margin-top: 20%;
+
+
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -852,7 +911,6 @@ padding: 20px 0;
 
 
   .menuBar{
-    padding-right: 10%;
     width: 30%;
     height: auto;
     display: flex;

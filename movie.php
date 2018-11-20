@@ -3,6 +3,16 @@
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
 <html lang="da">
 
+<?php
+require ("db/db.php");
+
+$var = mysqli_real_escape_string($db, $_GET["variable"]);
+$dbMovie = mysqli_query($db, "SELECT * FROM movies WHERE 
+      mId = '$var'");
+
+$data = mysqli_fetch_assoc($dbMovie);
+?>
+
 <!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
 <head>
 
@@ -10,7 +20,7 @@
     <meta charset="utf-8">
 
     <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Sigende titel</title>
+    <title><?php echo $data["mTitle"] ?></title>
 
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
@@ -36,6 +46,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="">
 
 </head>
 

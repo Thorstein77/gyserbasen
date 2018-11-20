@@ -26,6 +26,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
     <!-- Til CSS: font-family: 'Stardos Stencil', cursive; -->
+    <link rel="icon" href="images/favicon.png" type="">
 
 </head>
 
