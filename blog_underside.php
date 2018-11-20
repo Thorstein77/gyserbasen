@@ -52,40 +52,9 @@
     <div class="content">
 
 
-        <header>
-            <div class="logo">
-                <a href="index.php">
-                    <img src="images/Logo_hvid.png">
-                </a>
-
-            </div>
-
-            <div class="menuBar">
-                <a href="index.php">
-                    FORSIDE
-                </a>
-                <a href="blog_underside.html">
-                    BLOGS
-                </a>
-            </div>
-
-
-            <div class="dropDown">
-                <button class="drop"><img src="images/menu.png"></button>
-
-                <div class="dropDowncontent">
-                    <a href="index.php">
-                        <p>FORSIDE </p>
-                    </a>
-
-                    <a href="blog_underside.html">
-                        <p> BLOGS </p>
-                    </a>
-                </div>
-
-
-            </div>
-        </header>
+        <?php
+        require ("php/header.php");
+        ?>
 
         <main>
 
@@ -126,8 +95,8 @@
 
                     <div class="flex">
                         <button><a href="#">
-                            LÆS FLERE BLOGS
-                        </a></button>
+                                LÆS FLERE BLOGS
+                            </a></button>
                     </div>
                 </div>
             </section>
@@ -153,12 +122,12 @@
 
                     </div>
 
-                        <br>  <br>
+                    <br>  <br>
                     <div class="kommentar1">
 
-                           <div class="date1">
-                               <p>02/09/2018</p>
-                           </div>
+                        <div class="date1">
+                            <p>02/09/2018</p>
+                        </div>
 
                         <div class="billedeTilkommentar1">
                             <i class="fas fa-laugh-beam fa-4x"></i>
@@ -166,7 +135,7 @@
 
                         <div class="txtTilkomentar1">
 
-                                <br>
+                            <br>
                             <h3>flotte_fyr</h3>
                             <br> <br>
                             <p>
@@ -189,7 +158,7 @@
 
                         <div class="txtTilkomentar2">
                             <br>
-                             <h3>HotteConnie! </h3> <br> <br>
+                            <h3>HotteConnie! </h3> <br> <br>
                             <p>
                                 LOL !!!!!!!!
                             </p>
@@ -203,43 +172,10 @@
 
         </main>
 
-        <footer>
+        <?php
+        require ("php/footer.php");
+        ?>
 
-            <div class="footerText">
-
-                <p>
-                    © 2018 Gyser Basen
-                    <br><br>
-                    Tak til themoviedb.org
-                </p>
-
-
-            </div>
-
-
-            <div class="someIkoner_mobil">
-
-                <div class="facebookIkon">
-
-                    <a href="https://da-dk.facebook.com/login"><i class="fab fa-facebook-square"></i>
-                    </a>
-                </div>
-
-
-                <div class="twitterIkon">
-
-                    <a href="https://twitter.com/login?lang=da"><i class="fab fa-twitter-square"></i>
-                    </a>
-                </div>
-
-
-                <div class="googleIkon">
-
-                    <a href="https://plus.google.com/discover"><i class="fab fa-google-plus-square"></i>
-                    </a>
-                </div>
-            </div>
-        </footer>
     </div>
 </div>
 

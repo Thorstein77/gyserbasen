@@ -74,7 +74,7 @@ require ("db/db.php");
 
             <form action="adminMoviesDelete.php?variable=<?php echo $var; ?>"
                   method="post" enctype="multipart/form-data" class="dltForm">
-                <label for="confirmDel">Slet billedet der hører til denne film?</label>
+                <label for="confirmDel">Er du sikker på du vil slette filmen?</label>
                 <input type="checkbox" name="confirmDel" id="confirmDel" value="Yes"><br>
                 <button type="submit">Slet denne film</button>
             </form>

@@ -10,8 +10,11 @@
         <a href="index.php">
             FORSIDE
         </a>
-        <a href="blog_underside.html">
+        <a href="blog_underside.php">
             BLOGS
+        </a>
+        <a href="movies.php">
+            <p>STREAMING</p>
         </a>
     </div>
 
@@ -24,8 +27,12 @@
                 <p>FORSIDE </p>
             </a>
 
-            <a href="blog_underside.html">
+            <a href="blog_underside.php">
                 <p> BLOGS </p>
+            </a>
+
+            <a href="movies.php">
+                <p>STREAMING</p>
             </a>
         </div>
 
