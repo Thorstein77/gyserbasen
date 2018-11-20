@@ -1,17 +1,20 @@
 <header>
     <div class="logo">
-        <a href="index.html">
+        <a href="index.php">
             <img src="images/Logo_hvid.png">
         </a>
 
     </div>
 
     <div class="menuBar">
-        <a href="index.html">
+        <a href="index.php">
             FORSIDE
         </a>
-        <a href="blog_underside.html">
+        <a href="blog_underside.php">
             BLOGS
+        </a>
+        <a href="movies.php">
+            <p>STREAMING</p>
         </a>
     </div>
 
@@ -20,12 +23,16 @@
         <button class="drop"><img src="images/menu.png"></button>
 
         <div class="dropDowncontent">
-            <a href="index.html">
+            <a href="index.php">
                 <p>FORSIDE </p>
             </a>
 
-            <a href="blog_underside.html">
+            <a href="blog_underside.php">
                 <p> BLOGS </p>
+            </a>
+
+            <a href="movies.php">
+                <p>STREAMING</p>
             </a>
         </div>
 

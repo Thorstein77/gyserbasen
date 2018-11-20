@@ -1,9 +1,14 @@
+<?php
+require ("php/inclLoginCheck.php");
+?>
+
 <!doctype html>
 <!-- Fortæller det er html5 -->
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
 <html lang="da">
 
 <head>
+
 <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
 <meta charset="utf-8">
 
@@ -43,23 +48,71 @@
 
 <!-- i <body> har man alt indhold på siden -->
 <body>
-<?php
-
-require ("db/db.php");
-
-
-
-?>
-
 
 <div class="backGroundImage">
     <div style="width: 90%; margin: 0 auto; background-color: rgba(255, 255, 255, 0.4);">
 
         <?php
         include ("php/header.php");
+        require ("db/db.php");
         ?>
 
+
         <?php
+
+        if (isset($_POST["mTitle"]) && !empty($_POST["mTitle"])
+        && isset($_POST["mGenre"]) && !empty($_POST["mGenre"])
+        && isset($_POST["mYear"]) && !empty($_POST["mYear"])
+        && isset($_POST["mApi"]) && !empty($_POST["mApi"])
+        && !empty($_FILES["mImg"])) {
+            $title = mysqli_real_escape_string($db, $_POST["mTitle"]);
+            $genre = mysqli_real_escape_string($db, $_POST["mGenre"]);
+            $year = mysqli_real_escape_string($db, $_POST["mYear"]);
+            $img = ($_FILES['mImg']['name']);
+            $api = mysqli_real_escape_string($db, $_POST["mApi"]);
+            $target = "images/";
+            $target = $target .basename($_FILES['mImg']['name']);
+
+            mysqli_query($db, "INSERT INTO movies VALUES ('', '$title', '$genre', '$year', 'images/$img', '$api')");
+
+            if(move_uploaded_file($_FILES['mImg']['tmp_name'],$target)){
+                echo "Filmen er tilføjet til databasen.";
+            }else{
+                echo "Der er sket en fejl.";
+            }
+        }else {
+
+            ?>
+
+            <form method="POST" action="adminMoviesCreate.php" enctype="multipart/form-data">
+                <label for="mTitle">Title</label>
+                <input type="text" name="mTitle" id="mTitle">
+
+                <br><br>
+
+                <label for="mGenre">Genre</label>
+                <input type="text" name="mGenre" id="mGenre">
+
+                <br><br>
+
+                <label for="mYear">År</label>
+                <input type="text" name="mYear" id="mYear">
+
+                <br><br>
+
+                <label for="mImg">Vælg billede</label>
+                <input type="file" name="mImg" id="mImg">
+
+                <br><br>
+
+                <label for="mApi">API</label>
+                <input type="text" name="mApi" id="mApi">
+
+                <button type="submit">Opret</button>
+            </form>
+
+            <?php
+        }
         include ("php/footer.php");
         ?>
 

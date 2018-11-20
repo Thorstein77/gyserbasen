@@ -1,3 +1,7 @@
+<?php
+require ("php/inclLoginCheck.php");
+?>
+
 <!doctype html>
 <!-- Fortæller det er html5 -->
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
@@ -57,9 +61,26 @@ require ("db/db.php");
 
         <?php
         include ("php/header.php");
-        ?>
 
-        <?php
+        $del = mysqli_real_escape_string($db, $_GET["variable"]);
+        if(isset($_POST['confirmDel']) && $_POST['confirmDel'] == 'Yes'){
+            mysqli_query($db, "DELETE FROM movies WHERE mId = '$del'");
+
+            echo "<span style='color: white'>Filmen med ID: ".$del." er blevet slettet</span>";
+            echo "<br><br><a href='adminMovies.php' style='color: white'>Tilbage til admin side</a>";
+        }else {
+            require ("php/movieReq.php");
+            ?>
+
+            <form action="adminMoviesDelete.php?variable=<?php echo $var; ?>"
+                  method="post" enctype="multipart/form-data" class="dltForm">
+                <label for="confirmDel">Er du sikker på du vil slette filmen?</label>
+                <input type="checkbox" name="confirmDel" id="confirmDel" value="Yes"><br>
+                <button type="submit">Slet denne film</button>
+            </form>
+
+            <?php
+        }
         include ("php/footer.php");
         ?>
 

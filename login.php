@@ -16,55 +16,46 @@
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <!-- Titel, description og keywords skal være forskellige på alle undersider -->
-
-    <meta property="og:title" content="titel">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.domain.dk">
-    <meta property="og:image" content="https://www.domain.dk/img.jpg">
-    <meta property="og:description" content="Beskrivelse">
-    <meta property="og:locale" content="da_DK">
-
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!-- Tillader brug af Font Awesome ikoner -->
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
+    <!-- Googlefonts -->
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
 
 </head>
 
 <!-- i <body> har man alt indhold på siden -->
 <body>
-
-<?php
+<div style="width: 90%; margin: 0 auto; background-color: rgba(255, 255, 255, 0.4);">
+    <?php
     require ("db/db.php");
-?>
+    require("php/header.php");
+    ?>
+    <h1>Admin Login</h1>
 
-<div style="width: 90%; margin: 0 auto">
-<?php
-    require ("php/header.php");
-?>
+    <div class="adminLogin">
+        <form action="login2.php" method="post">
+            <label for="adminUser">Email:</label><br>
+            <input type="text" name="adminUser" id="adminUser" placeholder="Email"><br><br>
+            <label for="adminPass">Password:</label><br>
+            <input type="password" name="adminPass" id="adminPass" placeholder="Password"><br>
+            <button type="submit" name="login">Login</button>
+        </form>
+    </div>
+
 </div>
-
 <?php
-    require ("php/movieReq.php");
-    require ("php/footer.php")
+require ("php/footer.php");
 ?>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
-
-
 </script>
+
 </body>
 </html>
-
-

@@ -36,40 +36,9 @@
     <div class="content">
 
 
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/Logo_hvid.png">
-                </a>
-
-            </div>
-
-                <div class="menuBar">
-                    <a href="index.html">
-                        FORSIDE
-                    </a>
-                    <a href="blog_underside.html">
-                        BLOGS
-                    </a>
-                </div>
-
-
-                <div class="dropDown">
-                    <button class="drop"><img src="images/menu.png"></button>
-
-                    <div class="dropDowncontent">
-                        <a href="index.html">
-                            <p>FORSIDE </p>
-                        </a>
-
-                        <a href="blog_underside.html">
-                            <p> BLOGS </p>
-                        </a>
-                    </div>
-
-
-                </div>
-        </header>
+        <?php
+        require ("php/header.php");
+        ?>
 
         <main>
 
@@ -85,30 +54,30 @@
                     <div class="videoSlideshow fade">
 
                         <div class="videoSlideNumbertext">1 / 3</div>
-                            <div class="responsive-video">
-                                <iframe width="720" height="405" src="https://www.youtube.com/embed/pzD9zGcUNrw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            </div>
-                        <div class="videoSlideText"><h2>The Nun er nu i biograferne</h2><br><p>Se traileren her! <br> Hvis du kunne tænke dig at læse mere om The Nun kan du gøre det <a href="index.html">her</a></p></div>
+                        <div class="responsive-video">
+                            <iframe width="720" height="405" src="https://www.youtube.com/embed/pzD9zGcUNrw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <div class="videoSlideText"><h2>The Nun er nu i biograferne</h2><br><p>Se traileren her! <br> Hvis du kunne tænke dig at læse mere om The Nun kan du gøre det <a href="#">her</a></p></div>
 
                     </div>
 
                     <div class="videoSlideshow fade">
 
                         <div class="videoSlideNumbertext">2 / 3</div>
-                            <div class="responsive-video">
-                                <iframe width="720" height="405" src="https://www.youtube.com/embed/xLCn88bfW1o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            </div>
-                        <div class="videoSlideText"><h2>Ny Venom trailer</h2><br><p>Der er udgivet en ny Venom trailer! Se den her. <br> Husk også at læse <a href="index.html">vores anmelderes</a> mening om filmen! </p></div>
+                        <div class="responsive-video">
+                            <iframe width="720" height="405" src="https://www.youtube.com/embed/xLCn88bfW1o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <div class="videoSlideText"><h2>Ny Venom trailer</h2><br><p>Der er udgivet en ny Venom trailer! Se den her. <br> Husk også at læse <a href="#">vores anmelderes</a> mening om filmen! </p></div>
 
                     </div>
 
                     <div class="videoSlideshow fade">
 
                         <div class="videoSlideNumbertext">3 / 3</div>
-                            <div class="responsive-video">
-                                <iframe width="720" height="405" src="https://www.youtube.com/embed/89OP78l9oF0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            </div>
-                        <div class="videoSlideText"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen. <br> Huske også at læse hvad vores anmelder havde at <a href="index.html">sige om Annihilation!</a> </p></div>
+                        <div class="responsive-video">
+                            <iframe width="720" height="405" src="https://www.youtube.com/embed/89OP78l9oF0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <div class="videoSlideText"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen. <br> Huske også at læse hvad vores anmelder havde at <a href="#">sige om Annihilation!</a> </p></div>
 
                     </div>
 
@@ -118,9 +87,9 @@
                 </div>
 
                 <div class="beskrivelseGraaBoks">
-                    <div class="videoSlideTextWeb"><h2>The Nun er nu i biograferne</h2><br><p>Se traileren her! <br> Hvis du kunne tænke dig at læse mere om The Nun kan du gøre det <a href="index.html">her</a></p></div> <br>
-                    <div class="videoSlideTextWeb"><h2>Ny Venom trailer</h2><br><p>Der er udgivet en ny Venom trailer! Se den her. <br> Husk også at læse <a href="index.html">vores anmelderes</a> mening om filmen! </p></div> <br>
-                    <div class="videoSlideTextWeb"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen. <br> Huske også at læse hvad vores anmelder havde at <a href="index.html">sige om Annihilation!</a> </p></div> <br>
+                    <div class="videoSlideTextWeb"><h2>The Nun er nu i biograferne</h2><br><p>Se traileren her! <br> Hvis du kunne tænke dig at læse mere om The Nun kan du gøre det <a href="#">her</a></p></div> <br>
+                    <div class="videoSlideTextWeb"><h2>Ny Venom trailer</h2><br><p>Der er udgivet en ny Venom trailer! Se den her. <br> Husk også at læse <a href="#">vores anmelderes</a> mening om filmen! </p></div> <br>
+                    <div class="videoSlideTextWeb"><h2>Annihilation er fantastisk</h2><br><p>Hvem kan få nok af Annihilation? Ikke os! Se traileren igen. <br> Huske også at læse hvad vores anmelder havde at <a href="#">sige om Annihilation!</a> </p></div> <br>
                 </div>
 
             </section>
@@ -128,85 +97,85 @@
 
 
 
-                <section class="genreSection">
-                    <h1>
-                        FILM
-                    </h1>
+            <section class="genreSection">
+                <h1>
+                    FILM
+                </h1>
 
-                    <div>
-                        <div class="genreSlide">
-                            <h2>
-                                Gyser
-                            </h2>
+                <div>
+                    <div class="genreSlide">
+                        <h2>
+                            Gyser
+                        </h2>
 
-                            <div class="genreSlideMobile">
-                                <div class="genreSlideObject">
-                                    <div class="genre1-1"></div>
-                                </div>
-
-                                <div class="genreSlideObject">
-                                    <div class="genre1-2"></div>
-                                </div>
-
-                                <div class="genreSlideObject">
-                                    <div class="genre1-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="genreSlide2">
-                            <h2>
-                                Action / Gyser
-                            </h2>
-
-                            <div class="genreSlideMobile2">
-                                <div class="genreSlideObject2">
-                                    <div class="genre2-1"></div>
-                                </div>
-
-                                <div class="genreSlideObject2">
-                                    <div class="genre2-2"></div>
-                                </div>
-
-                                <div class="genreSlideObject2">
-                                    <div class="genre2-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="genreSlideWeb">
-                        <div class="genreSlideWebObject">
-                            <h2>
-                                GYSER
-                            </h2>
-
-                            <div class="flex">
+                        <div class="genreSlideMobile">
+                            <div class="genreSlideObject">
                                 <div class="genre1-1"></div>
+                            </div>
 
+                            <div class="genreSlideObject">
                                 <div class="genre1-2"></div>
+                            </div>
 
+                            <div class="genreSlideObject">
                                 <div class="genre1-3"></div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="genreSlideWebObject">
-                            <h2>
-                                ACTION / GYSER
-                            </h2>
+                <div>
+                    <div class="genreSlide2">
+                        <h2>
+                            Action / Gyser
+                        </h2>
 
-                            <div class="flex">
+                        <div class="genreSlideMobile2">
+                            <div class="genreSlideObject2">
                                 <div class="genre2-1"></div>
+                            </div>
 
+                            <div class="genreSlideObject2">
                                 <div class="genre2-2"></div>
+                            </div>
 
+                            <div class="genreSlideObject2">
                                 <div class="genre2-3"></div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+
+                <div class="genreSlideWeb">
+                    <div class="genreSlideWebObject">
+                        <h2>
+                            GYSER
+                        </h2>
+
+                        <div class="flex">
+                            <div class="genre1-1"></div>
+
+                            <div class="genre1-2"></div>
+
+                            <div class="genre1-3"></div>
+                        </div>
+                    </div>
+
+                    <div class="genreSlideWebObject">
+                        <h2>
+                            ACTION / GYSER
+                        </h2>
+
+                        <div class="flex">
+                            <div class="genre2-1"></div>
+
+                            <div class="genre2-2"></div>
+
+                            <div class="genre2-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section class="blog">
                 <img src="images/blogBlood.png">
@@ -232,65 +201,24 @@
                     </ol>
 
                     <div class="flex">
-                        <button><a href="blog_underside.html">
-                            LÆS HELE INDLÆGGET
-                        </a></button>
+                        <button><a href="blog_underside.php">
+                                LÆS HELE INDLÆGGET
+                            </a></button>
                     </div>
                 </div>
             </section>
-            </main>
+        </main>
 
-        <footer>
-
-            <div class="footerText">
-
-                <p>
-                    © 2018 Gyser Basen
-                    <br><br>
-                    Tak til themoviedb.org
-                </p>
-
-
-            </div>
-
-
-
-            <div class="someIkoner_mobil">
-                <div class="facebookIkon">
-
-                    <a href="https://da-dk.facebook.com/login">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                </div>
-
-
-                <div class="twitterIkon">
-
-                    <a href="https://twitter.com/login?lang=da">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
-                </div>
-
-
-                <div class="googleIkon">
-
-                    <a href="https://plus.google.com/discover">
-                        <i class="fab fa-google-plus-square"></i>
-                    </a>
-                </div>
-            </div>
-
-
-        </footer>
+        <?php
+        require ("php/footer.php");
+        ?>
     </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-    $('.drop').click(function () {
-        $('.dropDowncontent').toggle("slow")
-    })
+
 
     $(document).ready(function (e) {
         var slideIndex1 = 0;
@@ -364,7 +292,7 @@
                     $(".genre1-1").append("<br>" + v.name);
                 })
 
-                $(".genre1-1").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre1-1").append("<br><a href='movie.php?variable=2' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -394,7 +322,7 @@
                     }
                     $(".genre1-2").append("<br>" + v.name);
                 })
-                $(".genre1-2").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre1-2").append("<br><a href='movie.php?variable=12' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -424,7 +352,7 @@
                     }
                     $(".genre1-3").append("<br>" + v.name);
                 })
-                $(".genre1-3").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre1-3").append("<br><a href='movie.php?variable=13' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -454,7 +382,7 @@
                     }
                     $(".genre2-1").append("<br>" + v.name);
                 })
-                $(".genre2-1").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre2-1").append("<br><a href='movie.php?variable=1' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -484,7 +412,7 @@
                     }
                     $(".genre2-2").append("<br>" + v.name);
                 })
-                $(".genre2-2").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre2-2").append("<br><a href='movie.php?variable=9' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -514,7 +442,7 @@
                     }
                     $(".genre2-3").append("<br>" + v.name);
                 })
-                $(".genre2-3").append("<br><a href='#'>Læs Mere ...</a>")
+                $(".genre2-3").append("<br><a href='movie.php?variable=10' target='_blank'>Læs Mere ...</a>")
             },
             error: function (error) {
                 console.log(error);
@@ -529,32 +457,32 @@
 
 
 
-        var slideIndex = 1;
-        showSlides(slideIndex);
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("videoSlideshow");
-            var text = document.getElementsByClassName("videoSlideTextWeb")
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < text.length; i++) {
-                text[i].style.display = "none";
-            }
-            slides[slideIndex-1].style.display = "block";
-            text[slideIndex-1].style.display = "block";
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("videoSlideshow");
+        var text = document.getElementsByClassName("videoSlideTextWeb")
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
+        for (i = 0; i < text.length; i++) {
+            text[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+        text[slideIndex-1].style.display = "block";
+    }
 
 </script>
 
