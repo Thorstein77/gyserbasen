@@ -19,6 +19,10 @@ $data = mysqli_fetch_assoc($dbMovie);
 
             <div class="movieposter">
                 <img src="<?php echo $data["mImg"]; ?>">
+
+                <a href="moviePlay.php" class="playBtn">
+                    <i class="far fa-play-circle"></i>
+                </a>
             </div>
 
             <div class="movieTekst">

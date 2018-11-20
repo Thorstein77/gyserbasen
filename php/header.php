@@ -14,7 +14,7 @@
             BLOGS
         </a>
         <a href="movies.php">
-            <p>STREAMING</p>
+            STREAMING
         </a>
     </div>
 

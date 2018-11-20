@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
     <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Sigende titel</title>
+    <title>Admin Login</title>
 
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
@@ -26,6 +26,7 @@
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.png" type="">
 
 </head>
 

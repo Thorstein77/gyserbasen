@@ -13,7 +13,7 @@ require ("php/inclLoginCheck.php");
 <meta charset="utf-8">
 
 <!-- Titel som ses oppe i browserens tab mv. -->
-<title>Sigende titel</title>
+<title>Opret Film</title>
 
 <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
 <meta name="robots" content="All">

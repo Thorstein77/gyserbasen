@@ -13,7 +13,7 @@ require ("php/inclLoginCheck.php");
     <meta charset="utf-8">
 
     <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Sigende titel</title>
+    <title>Opret ny Admin</title>
 
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
@@ -43,6 +43,7 @@ require ("php/inclLoginCheck.php");
     <!-- SLICK slider -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="icon" href="images/favicon.png" type="">
 
 </head>
 
